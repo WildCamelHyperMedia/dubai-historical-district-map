@@ -1,0 +1,5320 @@
+{
+  "_meta": {
+    "project": "Dubai Historical District Interactive Map — prototype",
+    "artwork": {
+      "file": "assets/map/dhd-map-clean-4k.jpg",
+      "print": "assets/map/dhd-map-base-4k.jpg",
+      "width": 4117,
+      "height": 2364,
+      "credit": "The Historical District Map 2026 artwork © Department of Economy and Tourism, Dubai — used for prototype only, licence to be confirmed"
+    },
+    "coordinateSystem": "x,y normalised 0..1 across the cropped artwork (0,0 = top-left)",
+    "counts": {
+      "pois": 163,
+      "featured": 10,
+      "named": 107,
+      "utility": 56
+    },
+    "arabic": "DRAFT — all Arabic strings require Dubai Culture review",
+    "generated_by": "tools/build-data.py"
+  },
+  "categories": [
+    {
+      "id": "heritage",
+      "label": {
+        "en": "Heritage & Museums",
+        "ar": "التراث والمتاحف"
+      },
+      "color": "#9A4A2A"
+    },
+    {
+      "id": "souks",
+      "label": {
+        "en": "Souks & Markets",
+        "ar": "الأسواق"
+      },
+      "color": "#6E2F63"
+    },
+    {
+      "id": "arts",
+      "label": {
+        "en": "Arts & Culture",
+        "ar": "الفنون والثقافة"
+      },
+      "color": "#B8742B"
+    },
+    {
+      "id": "landmarks",
+      "label": {
+        "en": "Mosques & Landmarks",
+        "ar": "المساجد والمعالم"
+      },
+      "color": "#2E6B5E"
+    },
+    {
+      "id": "creek",
+      "label": {
+        "en": "Creek & Transport",
+        "ar": "الخور والمواصلات"
+      },
+      "color": "#1F6F8B"
+    },
+    {
+      "id": "food",
+      "label": {
+        "en": "Eat & Drink",
+        "ar": "المطاعم والمقاهي"
+      },
+      "color": "#C2543A"
+    },
+    {
+      "id": "stay",
+      "label": {
+        "en": "Stay",
+        "ar": "الإقامة"
+      },
+      "color": "#33436B"
+    },
+    {
+      "id": "services",
+      "label": {
+        "en": "Services",
+        "ar": "الخدمات"
+      },
+      "color": "#4A4F57"
+    }
+  ],
+  "iconLabels": {
+    "museum": {
+      "en": "Museum",
+      "ar": "متحف"
+    },
+    "house": {
+      "en": "Heritage House",
+      "ar": "بيت تراثي"
+    },
+    "pavilion": {
+      "en": "Museum Pavilion",
+      "ar": "جناح متحفي"
+    },
+    "fort": {
+      "en": "Fort",
+      "ar": "حصن"
+    },
+    "tower": {
+      "en": "Wind Tower / Watchtower",
+      "ar": "برج"
+    },
+    "mosque": {
+      "en": "Mosque",
+      "ar": "مسجد"
+    },
+    "souq": {
+      "en": "Souq",
+      "ar": "سوق"
+    },
+    "market": {
+      "en": "Market",
+      "ar": "سوق"
+    },
+    "gallery": {
+      "en": "Gallery",
+      "ar": "غاليري"
+    },
+    "culture": {
+      "en": "Cultural Centre",
+      "ar": "مركز ثقافي"
+    },
+    "sculpture": {
+      "en": "Public Art",
+      "ar": "فن عام"
+    },
+    "library": {
+      "en": "Library",
+      "ar": "مكتبة"
+    },
+    "school": {
+      "en": "Historic School",
+      "ar": "مدرسة تاريخية"
+    },
+    "square": {
+      "en": "Square",
+      "ar": "ساحة"
+    },
+    "district": {
+      "en": "Historic Neighbourhood",
+      "ar": "حي تاريخي"
+    },
+    "bridge": {
+      "en": "Bridge",
+      "ar": "جسر"
+    },
+    "wall": {
+      "en": "Historic Wall",
+      "ar": "سور تاريخي"
+    },
+    "street": {
+      "en": "Street",
+      "ar": "شارع"
+    },
+    "hotel": {
+      "en": "Hotel",
+      "ar": "فندق"
+    },
+    "restaurant": {
+      "en": "Restaurant",
+      "ar": "مطعم"
+    },
+    "cafe": {
+      "en": "Café",
+      "ar": "مقهى"
+    },
+    "metro": {
+      "en": "Metro Station",
+      "ar": "محطة مترو"
+    },
+    "busstation": {
+      "en": "Bus Station",
+      "ar": "محطة حافلات"
+    },
+    "bus": {
+      "en": "Bus Stop",
+      "ar": "موقف حافلات"
+    },
+    "marine": {
+      "en": "Marine Transport Station",
+      "ar": "محطة النقل البحري"
+    },
+    "abra": {
+      "en": "Abra",
+      "ar": "عبرة"
+    },
+    "ferry": {
+      "en": "Dubai Ferry",
+      "ar": "عبّارة دبي"
+    },
+    "watertaxi": {
+      "en": "Water Taxi",
+      "ar": "تاكسي مائي"
+    },
+    "dhow": {
+      "en": "Dhow Cruise",
+      "ar": "رحلة داو"
+    },
+    "parking": {
+      "en": "Parking",
+      "ar": "مواقف السيارات"
+    },
+    "restroom": {
+      "en": "Restrooms",
+      "ar": "دورات المياه"
+    },
+    "restarea": {
+      "en": "Rest Area",
+      "ar": "استراحة"
+    },
+    "info": {
+      "en": "Visitor Centre",
+      "ar": "مركز الزوار"
+    },
+    "hall": {
+      "en": "Hall",
+      "ar": "قاعة"
+    },
+    "landmark": {
+      "en": "Landmark",
+      "ar": "معلم"
+    }
+  },
+  "about": {
+    "title": {
+      "en": "Dubai Historical District",
+      "ar": "حي دبي التاريخي"
+    },
+    "subtitle": {
+      "en": "Al Shindagha · Bur Dubai · Al Fahidi · Al Seef · Deira",
+      "ar": "الشندغة · بر دبي · الفهيدي · السيف · ديرة"
+    },
+    "intro": {
+      "en": "Dubai is globally renowned as an ultra-modern metropolis with one foot in the future. But what about its past? Step back in time and explore the emirate's rich heritage and culture in its historic neighbourhoods. Here you'll discover a very different side to Dubai, and how its humble roots and proud traditions remain deeply embedded to this day.",
+      "ar": "تشتهر دبي عالمياً كمدينة عصرية متقدمة تضع قدماً في المستقبل. لكن ماذا عن ماضيها؟ عودوا بالزمن واستكشفوا التراث الغني والثقافة الأصيلة للإمارة في أحيائها التاريخية. هنا ستكتشفون وجهاً مختلفاً تماماً لدبي، وكيف بقيت جذورها المتواضعة وتقاليدها العريقة راسخة حتى اليوم."
+    },
+    "directions": {
+      "en": "Dubai Metro Green Line: Al Ras (G23) for Deira's souks and Al Ghubaiba (G24) for Al Shindagha and Bur Dubai. Marine transport stations at Al Shindagha, Al Ghubaiba, Bur Dubai, Dubai Old Souq, Deira Old Souk, Al Fahidi, Al Sabkha and Al Seef connect both banks of the Creek by abra, water taxi and ferry. Al Ghubaiba Bus Station serves the west of the district.",
+      "ar": "TBC"
+    },
+    "busRoutes": [
+      {
+        "code": "G23",
+        "en": "Al Ras Metro Station — Dubai Metro Green Line",
+        "ar": "محطة مترو الراس — الخط الأخضر"
+      },
+      {
+        "code": "G24",
+        "en": "Al Ghubaiba Metro Station — Dubai Metro Green Line",
+        "ar": "محطة مترو الغبيبة — الخط الأخضر"
+      },
+      {
+        "code": "Abra",
+        "en": "Creek crossings between Bur Dubai, Dubai Old Souq, Deira Old Souk, Al Fahidi, Al Sabkha and Al Seef",
+        "ar": "عبور الخور بين بر دبي وسوق دبي القديم وسوق ديرة القديم والفهيدي والسبخة والسيف"
+      }
+    ],
+    "source": "The Historical District Map 2026 (Dubai Department of Economy and Tourism) — copy reproduced for prototype only"
+  },
+  "pois": [
+    {
+      "id": "al-shindagha-museum",
+      "name": {
+        "en": "Al Shindagha Museum",
+        "ar": "متحف الشندغة"
+      },
+      "category": "heritage",
+      "icon": "museum",
+      "tier": 1,
+      "featured": true,
+      "generic": false,
+      "x": 0.1567,
+      "y": 0.6324,
+      "description": {
+        "en": "This museum tells the proud story of the nation's past and reverent traditions. 'Dubai Creek: Birth of a City' is a state-of-the-art experience that guides visitors through the area's dramatic development over the centuries. The tour highlights what it was like for Emiratis to raise a family by the waterways, and how maritime trade affected their livelihoods.",
+        "ar": "يروي هذا المتحف قصة ماضي الدولة وتقاليدها العريقة. «خور دبي: ولادة مدينة» تجربة متطورة تأخذ الزوار عبر التطور اللافت للمنطقة على مرّ القرون، وتسلّط الضوء على حياة الأسر الإماراتية على ضفاف الخور وأثر التجارة البحرية في معيشتها."
+      },
+      "image": "assets/images/al-shindagha-museum.jpg",
+      "navigation": {
+        "mapsQuery": "Al Shindagha Museum",
+        "googleMaps": "https://www.google.com/maps/search/?api=1&query=Al+Shindagha+Museum+Dubai",
+        "qr": "assets/qr/al-shindagha-museum.png"
+      },
+      "meta": {
+        "hours": "TBC",
+        "phone": "TBC",
+        "website": "TBC"
+      },
+      "ar_status": "draft",
+      "source": "The Historical District Map 2026 (Dubai Department of Economy and Tourism) — copy reproduced for prototype only"
+    },
+    {
+      "id": "al-fahidi-historical-neighbourhood",
+      "name": {
+        "en": "Al Fahidi Historical Neighbourhood",
+        "ar": "حي الفهيدي التاريخي"
+      },
+      "category": "heritage",
+      "icon": "district",
+      "tier": 1,
+      "featured": true,
+      "generic": false,
+      "x": 0.6315,
+      "y": 0.6887,
+      "description": {
+        "en": "Journey back in time and discover what life in Dubai was like during the mid-19th century. The district's twisting pathways and traditional wind towers tell the story of life before the seven emirates. Follow the winding streets to discover a range of cultural activities, museums, art galleries, special events and authentic food.",
+        "ar": "عودوا بالزمن إلى الوراء واكتشفوا شكل الحياة في دبي في منتصف القرن التاسع عشر. تروي أزقة الحي المتعرجة وأبراج الهواء التقليدية قصة الحياة قبل قيام الإمارات السبع. اتبعوا الشوارع الملتوية لاكتشاف أنشطة ثقافية ومتاحف ومعارض فنية وفعاليات خاصة ومأكولات أصيلة."
+      },
+      "image": "assets/images/al-fahidi-historical-neighbourhood.jpg",
+      "navigation": {
+        "mapsQuery": "Al Fahidi Historical Neighbourhood",
+        "googleMaps": "https://www.google.com/maps/search/?api=1&query=Al+Fahidi+Historical+Neighbourhood+Dubai",
+        "qr": "assets/qr/al-fahidi-historical-neighbourhood.png"
+      },
+      "meta": {
+        "hours": "TBC",
+        "phone": "TBC",
+        "website": "TBC"
+      },
+      "ar_status": "draft",
+      "source": "The Historical District Map 2026 (Dubai Department of Economy and Tourism) — copy reproduced for prototype only"
+    },
+    {
+      "id": "cross-the-creek-on-an-abra",
+      "name": {
+        "en": "Cross the Creek on an Abra",
+        "ar": "اعبروا الخور على متن عبرة"
+      },
+      "category": "creek",
+      "icon": "abra",
+      "tier": 1,
+      "featured": true,
+      "generic": false,
+      "x": 0.6089,
+      "y": 0.481,
+      "description": {
+        "en": "For just AED1 (US$0.27), you can hop aboard one of Dubai Creek's many traditional ferry boats, known as abras, to travel between Bur Dubai and Deira. Each abra, or 'water taxi', holds about 20 passengers and crossings start around 6am every day. Admire spectacular views of old Dubai on your journey – including traditional houses, wind towers and minarets.",
+        "ar": "بدرهم واحد فقط يمكنكم الصعود على متن إحدى القوارب التقليدية في خور دبي، المعروفة بالعبرات، للتنقل بين بر دبي وديرة. تتسع كل عبرة لنحو 20 راكباً وتبدأ الرحلات نحو السادسة صباحاً يومياً. استمتعوا خلال الرحلة بإطلالات رائعة على دبي القديمة، من البيوت التقليدية وأبراج الهواء والمآذن."
+      },
+      "image": "assets/images/cross-the-creek-on-an-abra.jpg",
+      "navigation": {
+        "mapsQuery": "Dubai Creek Abra Station Bur Dubai",
+        "googleMaps": "https://www.google.com/maps/search/?api=1&query=Dubai+Creek+Abra+Station+Bur+Dubai+Dubai",
+        "qr": "assets/qr/cross-the-creek-on-an-abra.png"
+      },
+      "meta": {
+        "hours": "TBC",
+        "phone": "TBC",
+        "website": "TBC"
+      },
+      "ar_status": "draft",
+      "source": "The Historical District Map 2026 (Dubai Department of Economy and Tourism) — copy reproduced for prototype only"
+    },
+    {
+      "id": "spice-souk",
+      "name": {
+        "en": "Spice Souk",
+        "ar": "سوق التوابل"
+      },
+      "category": "souks",
+      "icon": "souq",
+      "tier": 1,
+      "featured": true,
+      "generic": false,
+      "x": 0.5468,
+      "y": 0.4251,
+      "description": {
+        "en": "This vibrant bazaar promises a colourful and aromatic experience, as you peruse the herbs and spices spilling from large baskets at every turn. Chat to the vendors, who will give you plenty of ideas on how you can use the exotic spices on offer, while a wide variety of fragrant teas from around the world are also available.",
+        "ar": "يَعِد هذا البازار النابض بالحياة بتجربة مفعمة بالألوان والروائح، حيث تتدفق الأعشاب والتوابل من السلال الكبيرة عند كل منعطف. تحدثوا إلى الباعة الذين سيمنحونكم أفكاراً كثيرة لاستخدام التوابل المعروضة، كما تتوفر تشكيلة واسعة من أنواع الشاي العطري من مختلف أنحاء العالم."
+      },
+      "image": "assets/images/spice-souk.jpg",
+      "navigation": {
+        "mapsQuery": "Spice Souk Deira",
+        "googleMaps": "https://www.google.com/maps/search/?api=1&query=Spice+Souk+Deira+Dubai",
+        "qr": "assets/qr/spice-souk.png"
+      },
+      "meta": {
+        "hours": "TBC",
+        "phone": "TBC",
+        "website": "TBC"
+      },
+      "ar_status": "draft",
+      "source": "The Historical District Map 2026 (Dubai Department of Economy and Tourism) — copy reproduced for prototype only"
+    },
+    {
+      "id": "womens-museum",
+      "name": {
+        "en": "Women's Museum (Bait Al Banat)",
+        "ar": "متحف المرأة (بيت البنات)"
+      },
+      "category": "heritage",
+      "icon": "museum",
+      "tier": 2,
+      "featured": true,
+      "generic": false,
+      "x": 0.5817,
+      "y": 0.1442,
+      "description": {
+        "en": "Enjoy an insight into the history of Emirati women – including artists, activists and scholars – and their role in the UAE's development. The museum also hosts regular events including talks, presentations and special exhibitions, and conducts research through its Women's Studies Centre.",
+        "ar": "تعرّفوا على تاريخ المرأة الإماراتية، من فنانات وناشطات وعالمات، ودورها في نهضة دولة الإمارات. يستضيف المتحف فعاليات منتظمة تشمل المحاضرات والعروض والمعارض الخاصة، ويُجري أبحاثاً من خلال مركز دراسات المرأة."
+      },
+      "image": "assets/images/womens-museum.jpg",
+      "navigation": {
+        "mapsQuery": "Women's Museum Bait Al Banat Dubai",
+        "googleMaps": "https://www.google.com/maps/search/?api=1&query=Women's+Museum+Bait+Al+Banat+Dubai+Dubai",
+        "qr": "assets/qr/womens-museum.png"
+      },
+      "meta": {
+        "hours": "TBC",
+        "phone": "TBC",
+        "website": "TBC"
+      },
+      "ar_status": "draft",
+      "source": "The Historical District Map 2026 (Dubai Department of Economy and Tourism) — copy reproduced for prototype only"
+    },
+    {
+      "id": "museum-of-illusions",
+      "name": {
+        "en": "Museum of Illusions",
+        "ar": "متحف الأوهام"
+      },
+      "category": "heritage",
+      "icon": "museum",
+      "tier": 1,
+      "featured": true,
+      "generic": false,
+      "x": 0.8195,
+      "y": 0.563,
+      "description": {
+        "en": "Explore more than 60 exhibits, packed with optical illusions and immersive installations. Jump straight into the fun with the Vortex Tunnel and see yourself in a new light at the Mirror Room. The exhibits lend themselves to some unreal Insta-worthy shots, so make sure to charge your phone beforehand.",
+        "ar": "استكشفوا أكثر من 60 معروضاً مليئاً بالخدع البصرية والتجارب الغامرة. انطلقوا مباشرة إلى المرح في نفق الدوامة، وشاهدوا أنفسكم بصورة جديدة في غرفة المرايا. المعروضات مثالية لالتقاط صور لا تُصدّق، فاحرصوا على شحن هواتفكم مسبقاً."
+      },
+      "image": "assets/images/museum-of-illusions.jpg",
+      "navigation": {
+        "mapsQuery": "Museum of Illusions Dubai Al Seef",
+        "googleMaps": "https://www.google.com/maps/search/?api=1&query=Museum+of+Illusions+Dubai+Al+Seef+Dubai",
+        "qr": "assets/qr/museum-of-illusions.png"
+      },
+      "meta": {
+        "hours": "TBC",
+        "phone": "TBC",
+        "website": "TBC"
+      },
+      "ar_status": "draft",
+      "source": "The Historical District Map 2026 (Dubai Department of Economy and Tourism) — copy reproduced for prototype only"
+    },
+    {
+      "id": "poet-al-oqaili",
+      "name": {
+        "en": "Museum of the Poet Al Oqaili",
+        "ar": "متحف الشاعر العقيلي"
+      },
+      "category": "heritage",
+      "icon": "museum",
+      "tier": 2,
+      "featured": true,
+      "generic": false,
+      "x": 0.5334,
+      "y": 0.3866,
+      "description": {
+        "en": "Step back in time at this beautiful heritage house, located near the Spice Souk, and learn about the legendary Arabic classical poet who moved into the building in 1923. The space is split into nine main wings covering Al Oqaili's life, poetry, correspondence, manuscripts and more.",
+        "ar": "عودوا بالزمن في هذا البيت التراثي الجميل قرب سوق التوابل، وتعرّفوا على الشاعر العربي الكلاسيكي الشهير الذي انتقل إلى المبنى عام 1923. ينقسم المكان إلى تسعة أجنحة رئيسية تتناول حياة العقيلي وشعره ومراسلاته ومخطوطاته وغير ذلك."
+      },
+      "image": "assets/images/poet-al-oqaili.jpg",
+      "navigation": {
+        "mapsQuery": "Museum of the Poet Al Oqaili Dubai",
+        "googleMaps": "https://www.google.com/maps/search/?api=1&query=Museum+of+the+Poet+Al+Oqaili+Dubai+Dubai",
+        "qr": "assets/qr/poet-al-oqaili.png"
+      },
+      "meta": {
+        "hours": "TBC",
+        "phone": "TBC",
+        "website": "TBC"
+      },
+      "ar_status": "draft",
+      "source": "The Historical District Map 2026 (Dubai Department of Economy and Tourism) — copy reproduced for prototype only"
+    },
+    {
+      "id": "coffee-museum",
+      "name": {
+        "en": "Coffee Museum",
+        "ar": "متحف القهوة"
+      },
+      "category": "heritage",
+      "icon": "museum",
+      "tier": 1,
+      "featured": true,
+      "generic": false,
+      "x": 0.7384,
+      "y": 0.7902,
+      "description": {
+        "en": "Coffee has always played an important role in Arabic culture, and this museum in Al Fahidi Historical Neighbourhood showcases exactly why. Coffee grinders used in the First World War, historical data dedicated to coffee and old brewing pots are just a few of the artefacts on display. Entry is free, with the museum shop on the ground floor.",
+        "ar": "لطالما لعبت القهوة دوراً مهماً في الثقافة العربية، ويوضّح هذا المتحف في حي الفهيدي التاريخي السبب. من المعروضات مطاحن قهوة استُخدمت في الحرب العالمية الأولى، ومعلومات تاريخية عن القهوة، وأباريق قديمة. الدخول مجاني، ويقع متجر المتحف في الطابق الأرضي."
+      },
+      "image": "assets/images/coffee-museum.jpg",
+      "navigation": {
+        "mapsQuery": "Coffee Museum Al Fahidi Dubai",
+        "googleMaps": "https://www.google.com/maps/search/?api=1&query=Coffee+Museum+Al+Fahidi+Dubai+Dubai",
+        "qr": "assets/qr/coffee-museum.png"
+      },
+      "meta": {
+        "hours": "TBC",
+        "phone": "TBC",
+        "website": "TBC"
+      },
+      "ar_status": "draft",
+      "source": "The Historical District Map 2026 (Dubai Department of Economy and Tourism) — copy reproduced for prototype only"
+    },
+    {
+      "id": "smccu",
+      "name": {
+        "en": "SMCCU Al Fahidi",
+        "ar": "مركز الشيخ محمد بن راشد آل مكتوم للتواصل الحضاري"
+      },
+      "category": "arts",
+      "icon": "culture",
+      "tier": 1,
+      "featured": true,
+      "generic": false,
+      "x": 0.8188,
+      "y": 0.72,
+      "description": {
+        "en": "Gain a greater appreciation of Dubai's culture and customs at the Sheikh Mohammed bin Rashid Al Maktoum Centre for Cultural Understanding (SMCCU). Take part in activities that help uncover local life, including basic Arabic lessons, heritage tours and guided mosque visits.",
+        "ar": "تعرّفوا عن قرب على ثقافة دبي وعاداتها في مركز الشيخ محمد بن راشد آل مكتوم للتواصل الحضاري. شاركوا في أنشطة تكشف الحياة المحلية، من دروس اللغة العربية الأساسية إلى الجولات التراثية والزيارات المصحوبة بمرشدين إلى المساجد."
+      },
+      "image": "assets/images/smccu.jpg",
+      "navigation": {
+        "mapsQuery": "Sheikh Mohammed Centre for Cultural Understanding Al Fahidi",
+        "googleMaps": "https://www.google.com/maps/search/?api=1&query=Sheikh+Mohammed+Centre+for+Cultural+Understanding+Al+Fahidi+Dubai",
+        "qr": "assets/qr/smccu.png"
+      },
+      "meta": {
+        "hours": "TBC",
+        "phone": "TBC",
+        "website": "TBC"
+      },
+      "ar_status": "draft",
+      "source": "The Historical District Map 2026 (Dubai Department of Economy and Tourism) — copy reproduced for prototype only"
+    },
+    {
+      "id": "perfume-house",
+      "name": {
+        "en": "Perfume House",
+        "ar": "بيت العطور"
+      },
+      "category": "heritage",
+      "icon": "pavilion",
+      "tier": 2,
+      "featured": true,
+      "generic": false,
+      "x": 0.2271,
+      "y": 0.503,
+      "description": {
+        "en": "Discover the story behind Emirati fragrances at Perfume House, part of Al Shindagha Museum. It illustrates how scents played an integral role in the country's history, with a legacy that still lives on today. Visitors can explore Emirati culture via scent and learn stories associated with the perfumes that influenced trade within the emirates.",
+        "ar": "اكتشفوا قصة العطور الإماراتية في بيت العطور، أحد أجنحة متحف الشندغة. يوضّح البيت الدور المحوري للروائح في تاريخ الدولة وإرثها المستمر حتى اليوم، ويتيح للزوار استكشاف الثقافة الإماراتية عبر العطر والتعرّف على قصص العطور التي أثّرت في التجارة بين الإمارات."
+      },
+      "image": "assets/images/perfume-house.jpg",
+      "navigation": {
+        "mapsQuery": "Perfume House Al Shindagha Museum",
+        "googleMaps": "https://www.google.com/maps/search/?api=1&query=Perfume+House+Al+Shindagha+Museum+Dubai",
+        "qr": "assets/qr/perfume-house.png"
+      },
+      "meta": {
+        "hours": "TBC",
+        "phone": "TBC",
+        "website": "TBC"
+      },
+      "ar_status": "draft",
+      "source": "The Historical District Map 2026 (Dubai Department of Economy and Tourism) — copy reproduced for prototype only"
+    },
+    {
+      "id": "culture-of-the-sea-pavilion",
+      "name": {
+        "en": "Culture of the Sea Pavilion",
+        "ar": "جناح ثقافة البحر"
+      },
+      "category": "heritage",
+      "icon": "pavilion",
+      "tier": 2,
+      "featured": false,
+      "generic": false,
+      "x": 0.2385,
+      "y": 0.3261,
+      "description": {
+        "en": "",
+        "ar": ""
+      },
+      "image": "",
+      "navigation": {
+        "mapsQuery": "Culture of the Sea Pavilion Al Shindagha Museum",
+        "googleMaps": "https://www.google.com/maps/search/?api=1&query=Culture+of+the+Sea+Pavilion+Al+Shindagha+Museum+Dubai",
+        "qr": "assets/qr/culture-of-the-sea-pavilion.png"
+      },
+      "meta": {
+        "hours": "TBC",
+        "phone": "TBC",
+        "website": "TBC"
+      },
+      "ar_status": "draft",
+      "source": "printed map label"
+    },
+    {
+      "id": "life-on-land-trade-journeys",
+      "name": {
+        "en": "Life on Land: Trade & Journeys",
+        "ar": "الحياة على اليابسة: التجارة والرحلات"
+      },
+      "category": "heritage",
+      "icon": "pavilion",
+      "tier": 3,
+      "featured": false,
+      "generic": false,
+      "x": 0.1003,
+      "y": 0.3219,
+      "description": {
+        "en": "",
+        "ar": ""
+      },
+      "image": "",
+      "navigation": {
+        "mapsQuery": "Al Shindagha Museum Life on Land",
+        "googleMaps": "https://www.google.com/maps/search/?api=1&query=Al+Shindagha+Museum+Life+on+Land+Dubai",
+        "qr": "assets/qr/life-on-land-trade-journeys.png"
+      },
+      "meta": {
+        "hours": "TBC",
+        "phone": "TBC",
+        "website": "TBC"
+      },
+      "ar_status": "draft",
+      "source": "printed map label"
+    },
+    {
+      "id": "life-on-land-water-flora-fauna",
+      "name": {
+        "en": "Life on Land: Water, Flora & Fauna",
+        "ar": "الحياة على اليابسة: الماء والنبات والحيوان"
+      },
+      "category": "heritage",
+      "icon": "pavilion",
+      "tier": 3,
+      "featured": false,
+      "generic": false,
+      "x": 0.0794,
+      "y": 0.3541,
+      "description": {
+        "en": "",
+        "ar": ""
+      },
+      "image": "",
+      "navigation": {
+        "mapsQuery": "Al Shindagha Museum Life on Land",
+        "googleMaps": "https://www.google.com/maps/search/?api=1&query=Al+Shindagha+Museum+Life+on+Land+Dubai",
+        "qr": "assets/qr/life-on-land-water-flora-fauna.png"
+      },
+      "meta": {
+        "hours": "TBC",
+        "phone": "TBC",
+        "website": "TBC"
+      },
+      "ar_status": "draft",
+      "source": "printed map label"
+    },
+    {
+      "id": "life-on-land",
+      "name": {
+        "en": "Life on Land",
+        "ar": "الحياة على اليابسة"
+      },
+      "category": "heritage",
+      "icon": "pavilion",
+      "tier": 3,
+      "featured": false,
+      "generic": false,
+      "x": 0.0748,
+      "y": 0.3858,
+      "description": {
+        "en": "",
+        "ar": ""
+      },
+      "image": "",
+      "navigation": {
+        "mapsQuery": "Al Shindagha Museum Life on Land",
+        "googleMaps": "https://www.google.com/maps/search/?api=1&query=Al+Shindagha+Museum+Life+on+Land+Dubai",
+        "qr": "assets/qr/life-on-land.png"
+      },
+      "meta": {
+        "hours": "TBC",
+        "phone": "TBC",
+        "website": "TBC"
+      },
+      "ar_status": "draft",
+      "source": "printed map label"
+    },
+    {
+      "id": "people-and-faith-house",
+      "name": {
+        "en": "People and Faith House",
+        "ar": "بيت الناس والإيمان"
+      },
+      "category": "heritage",
+      "icon": "house",
+      "tier": 3,
+      "featured": false,
+      "generic": false,
+      "x": 0.0435,
+      "y": 0.4222,
+      "description": {
+        "en": "",
+        "ar": ""
+      },
+      "image": "",
+      "navigation": {
+        "mapsQuery": "People and Faith House Al Shindagha",
+        "googleMaps": "https://www.google.com/maps/search/?api=1&query=People+and+Faith+House+Al+Shindagha+Dubai",
+        "qr": "assets/qr/people-and-faith-house.png"
+      },
+      "meta": {
+        "hours": "TBC",
+        "phone": "TBC",
+        "website": "TBC"
+      },
+      "ar_status": "draft",
+      "source": "printed map label"
+    },
+    {
+      "id": "life-on-land-orientation",
+      "name": {
+        "en": "Life on Land: Orientation",
+        "ar": "الحياة على اليابسة: التوجيه"
+      },
+      "category": "heritage",
+      "icon": "pavilion",
+      "tier": 3,
+      "featured": false,
+      "generic": false,
+      "x": 0.0967,
+      "y": 0.4408,
+      "description": {
+        "en": "",
+        "ar": ""
+      },
+      "image": "",
+      "navigation": {
+        "mapsQuery": "Al Shindagha Museum Life on Land",
+        "googleMaps": "https://www.google.com/maps/search/?api=1&query=Al+Shindagha+Museum+Life+on+Land+Dubai",
+        "qr": "assets/qr/life-on-land-orientation.png"
+      },
+      "meta": {
+        "hours": "TBC",
+        "phone": "TBC",
+        "website": "TBC"
+      },
+      "ar_status": "draft",
+      "source": "printed map label"
+    },
+    {
+      "id": "educational-programming-house",
+      "name": {
+        "en": "Educational Programming House",
+        "ar": "بيت البرامج التعليمية"
+      },
+      "category": "heritage",
+      "icon": "house",
+      "tier": 3,
+      "featured": false,
+      "generic": false,
+      "x": 0.1528,
+      "y": 0.3858,
+      "description": {
+        "en": "",
+        "ar": ""
+      },
+      "image": "",
+      "navigation": {
+        "mapsQuery": "Al Shindagha Museum",
+        "googleMaps": "https://www.google.com/maps/search/?api=1&query=Al+Shindagha+Museum+Dubai",
+        "qr": "assets/qr/educational-programming-house.png"
+      },
+      "meta": {
+        "hours": "TBC",
+        "phone": "TBC",
+        "website": "TBC"
+      },
+      "ar_status": "draft",
+      "source": "printed map label"
+    },
+    {
+      "id": "life-on-land-expressions",
+      "name": {
+        "en": "Life on Land: Expressions",
+        "ar": "الحياة على اليابسة: التعبير"
+      },
+      "category": "heritage",
+      "icon": "pavilion",
+      "tier": 3,
+      "featured": false,
+      "generic": false,
+      "x": 0.1506,
+      "y": 0.4154,
+      "description": {
+        "en": "",
+        "ar": ""
+      },
+      "image": "",
+      "navigation": {
+        "mapsQuery": "Al Shindagha Museum Life on Land",
+        "googleMaps": "https://www.google.com/maps/search/?api=1&query=Al+Shindagha+Museum+Life+on+Land+Dubai",
+        "qr": "assets/qr/life-on-land-expressions.png"
+      },
+      "meta": {
+        "hours": "TBC",
+        "phone": "TBC",
+        "website": "TBC"
+      },
+      "ar_status": "draft",
+      "source": "printed map label"
+    },
+    {
+      "id": "traditional-healthcare-house",
+      "name": {
+        "en": "Traditional Healthcare House",
+        "ar": "بيت الرعاية الصحية التقليدية"
+      },
+      "category": "heritage",
+      "icon": "house",
+      "tier": 3,
+      "featured": false,
+      "generic": false,
+      "x": 0.136,
+      "y": 0.442,
+      "description": {
+        "en": "",
+        "ar": ""
+      },
+      "image": "",
+      "navigation": {
+        "mapsQuery": "Traditional Healthcare House Al Shindagha",
+        "googleMaps": "https://www.google.com/maps/search/?api=1&query=Traditional+Healthcare+House+Al+Shindagha+Dubai",
+        "qr": "assets/qr/traditional-healthcare-house.png"
+      },
+      "meta": {
+        "hours": "TBC",
+        "phone": "TBC",
+        "website": "TBC"
+      },
+      "ar_status": "draft",
+      "source": "printed map label"
+    },
+    {
+      "id": "traditional-food-house",
+      "name": {
+        "en": "Traditional Food House",
+        "ar": "بيت الطعام التقليدي"
+      },
+      "category": "heritage",
+      "icon": "house",
+      "tier": 3,
+      "featured": false,
+      "generic": false,
+      "x": 0.2123,
+      "y": 0.3731,
+      "description": {
+        "en": "",
+        "ar": ""
+      },
+      "image": "",
+      "navigation": {
+        "mapsQuery": "Traditional Food House Al Shindagha",
+        "googleMaps": "https://www.google.com/maps/search/?api=1&query=Traditional+Food+House+Al+Shindagha+Dubai",
+        "qr": "assets/qr/traditional-food-house.png"
+      },
+      "meta": {
+        "hours": "TBC",
+        "phone": "TBC",
+        "website": "TBC"
+      },
+      "ar_status": "draft",
+      "source": "printed map label"
+    },
+    {
+      "id": "emerging-city",
+      "name": {
+        "en": "Emerging City",
+        "ar": "المدينة الناشئة"
+      },
+      "category": "heritage",
+      "icon": "pavilion",
+      "tier": 3,
+      "featured": false,
+      "generic": false,
+      "x": 0.2181,
+      "y": 0.4091,
+      "description": {
+        "en": "",
+        "ar": ""
+      },
+      "image": "",
+      "navigation": {
+        "mapsQuery": "Al Shindagha Museum Emerging City",
+        "googleMaps": "https://www.google.com/maps/search/?api=1&query=Al+Shindagha+Museum+Emerging+City+Dubai",
+        "qr": "assets/qr/emerging-city.png"
+      },
+      "meta": {
+        "hours": "TBC",
+        "phone": "TBC",
+        "website": "TBC"
+      },
+      "ar_status": "draft",
+      "source": "printed map label"
+    },
+    {
+      "id": "al-maktoum-residence",
+      "name": {
+        "en": "Al Maktoum Residence",
+        "ar": "بيت آل مكتوم"
+      },
+      "category": "heritage",
+      "icon": "house",
+      "tier": 2,
+      "featured": false,
+      "generic": false,
+      "x": 0.212,
+      "y": 0.4505,
+      "description": {
+        "en": "",
+        "ar": ""
+      },
+      "image": "",
+      "navigation": {
+        "mapsQuery": "Al Maktoum Residence Al Shindagha",
+        "googleMaps": "https://www.google.com/maps/search/?api=1&query=Al+Maktoum+Residence+Al+Shindagha+Dubai",
+        "qr": "assets/qr/al-maktoum-residence.png"
+      },
+      "meta": {
+        "hours": "TBC",
+        "phone": "TBC",
+        "website": "TBC"
+      },
+      "ar_status": "draft",
+      "source": "printed map label"
+    },
+    {
+      "id": "community-hall",
+      "name": {
+        "en": "Community Hall",
+        "ar": "قاعة المجتمع"
+      },
+      "category": "heritage",
+      "icon": "hall",
+      "tier": 3,
+      "featured": false,
+      "generic": false,
+      "x": 0.0379,
+      "y": 0.4742,
+      "description": {
+        "en": "",
+        "ar": ""
+      },
+      "image": "",
+      "navigation": {
+        "mapsQuery": "Al Shindagha Museum Community Hall",
+        "googleMaps": "https://www.google.com/maps/search/?api=1&query=Al+Shindagha+Museum+Community+Hall+Dubai",
+        "qr": "assets/qr/community-hall.png"
+      },
+      "meta": {
+        "hours": "TBC",
+        "phone": "TBC",
+        "website": "TBC"
+      },
+      "ar_status": "draft",
+      "source": "printed map label"
+    },
+    {
+      "id": "traditional-jewellery-house",
+      "name": {
+        "en": "Traditional Jewellery House",
+        "ar": "بيت الحلي التقليدية"
+      },
+      "category": "heritage",
+      "icon": "house",
+      "tier": 3,
+      "featured": false,
+      "generic": false,
+      "x": 0.1358,
+      "y": 0.5004,
+      "description": {
+        "en": "",
+        "ar": ""
+      },
+      "image": "",
+      "navigation": {
+        "mapsQuery": "Traditional Jewellery House Al Shindagha",
+        "googleMaps": "https://www.google.com/maps/search/?api=1&query=Traditional+Jewellery+House+Al+Shindagha+Dubai",
+        "qr": "assets/qr/traditional-jewellery-house.png"
+      },
+      "meta": {
+        "hours": "TBC",
+        "phone": "TBC",
+        "website": "TBC"
+      },
+      "ar_status": "draft",
+      "source": "printed map label"
+    },
+    {
+      "id": "traditional-crafts-house",
+      "name": {
+        "en": "Traditional Crafts House",
+        "ar": "بيت الحرف التقليدية"
+      },
+      "category": "heritage",
+      "icon": "house",
+      "tier": 3,
+      "featured": false,
+      "generic": false,
+      "x": 0.18,
+      "y": 0.5127,
+      "description": {
+        "en": "",
+        "ar": ""
+      },
+      "image": "",
+      "navigation": {
+        "mapsQuery": "Traditional Crafts House Al Shindagha",
+        "googleMaps": "https://www.google.com/maps/search/?api=1&query=Traditional+Crafts+House+Al+Shindagha+Dubai",
+        "qr": "assets/qr/traditional-crafts-house.png"
+      },
+      "meta": {
+        "hours": "TBC",
+        "phone": "TBC",
+        "website": "TBC"
+      },
+      "ar_status": "draft",
+      "source": "printed map label"
+    },
+    {
+      "id": "beauty-and-adornments-house",
+      "name": {
+        "en": "Beauty and Adornments House",
+        "ar": "بيت الجمال والزينة"
+      },
+      "category": "heritage",
+      "icon": "house",
+      "tier": 3,
+      "featured": false,
+      "generic": false,
+      "x": 0.1195,
+      "y": 0.5245,
+      "description": {
+        "en": "",
+        "ar": ""
+      },
+      "image": "",
+      "navigation": {
+        "mapsQuery": "Beauty and Adornments House Al Shindagha",
+        "googleMaps": "https://www.google.com/maps/search/?api=1&query=Beauty+and+Adornments+House+Al+Shindagha+Dubai",
+        "qr": "assets/qr/beauty-and-adornments-house.png"
+      },
+      "meta": {
+        "hours": "TBC",
+        "phone": "TBC",
+        "website": "TBC"
+      },
+      "ar_status": "draft",
+      "source": "printed map label"
+    },
+    {
+      "id": "poetry-house",
+      "name": {
+        "en": "Poetry House",
+        "ar": "بيت الشعر"
+      },
+      "category": "heritage",
+      "icon": "house",
+      "tier": 3,
+      "featured": false,
+      "generic": false,
+      "x": 0.2259,
+      "y": 0.4835,
+      "description": {
+        "en": "",
+        "ar": ""
+      },
+      "image": "",
+      "navigation": {
+        "mapsQuery": "Poetry House Al Shindagha Museum",
+        "googleMaps": "https://www.google.com/maps/search/?api=1&query=Poetry+House+Al+Shindagha+Museum+Dubai",
+        "qr": "assets/qr/poetry-house.png"
+      },
+      "meta": {
+        "hours": "TBC",
+        "phone": "TBC",
+        "website": "TBC"
+      },
+      "ar_status": "draft",
+      "source": "printed map label"
+    },
+    {
+      "id": "historical-documents-centre",
+      "name": {
+        "en": "Historical Documents Centre",
+        "ar": "مركز الوثائق التاريخية"
+      },
+      "category": "heritage",
+      "icon": "museum",
+      "tier": 3,
+      "featured": false,
+      "generic": false,
+      "x": 0.2487,
+      "y": 0.5305,
+      "description": {
+        "en": "",
+        "ar": ""
+      },
+      "image": "",
+      "navigation": {
+        "mapsQuery": "Historical Documents Centre Al Shindagha",
+        "googleMaps": "https://www.google.com/maps/search/?api=1&query=Historical+Documents+Centre+Al+Shindagha+Dubai",
+        "qr": "assets/qr/historical-documents-centre.png"
+      },
+      "meta": {
+        "hours": "TBC",
+        "phone": "TBC",
+        "website": "TBC"
+      },
+      "ar_status": "draft",
+      "source": "printed map label"
+    },
+    {
+      "id": "crossroad-of-civilizations-museum",
+      "name": {
+        "en": "Crossroad of Civilizations Museum",
+        "ar": "متحف ملتقى الحضارات"
+      },
+      "category": "heritage",
+      "icon": "museum",
+      "tier": 2,
+      "featured": false,
+      "generic": false,
+      "x": 0.0398,
+      "y": 0.5478,
+      "description": {
+        "en": "",
+        "ar": ""
+      },
+      "image": "",
+      "navigation": {
+        "mapsQuery": "Crossroads of Civilizations Museum Dubai",
+        "googleMaps": "https://www.google.com/maps/search/?api=1&query=Crossroads+of+Civilizations+Museum+Dubai+Dubai",
+        "qr": "assets/qr/crossroad-of-civilizations-museum.png"
+      },
+      "meta": {
+        "hours": "TBC",
+        "phone": "TBC",
+        "website": "TBC"
+      },
+      "ar_status": "draft",
+      "source": "printed map label"
+    },
+    {
+      "id": "old-books-and-manuscripts-museum",
+      "name": {
+        "en": "Old Books and Manuscripts Museum",
+        "ar": "متحف الكتب والمخطوطات القديمة"
+      },
+      "category": "heritage",
+      "icon": "museum",
+      "tier": 3,
+      "featured": false,
+      "generic": false,
+      "x": 0.101,
+      "y": 0.555,
+      "description": {
+        "en": "",
+        "ar": ""
+      },
+      "image": "",
+      "navigation": {
+        "mapsQuery": "Old Books and Manuscripts Museum Al Shindagha",
+        "googleMaps": "https://www.google.com/maps/search/?api=1&query=Old+Books+and+Manuscripts+Museum+Al+Shindagha+Dubai",
+        "qr": "assets/qr/old-books-and-manuscripts-museum.png"
+      },
+      "meta": {
+        "hours": "TBC",
+        "phone": "TBC",
+        "website": "TBC"
+      },
+      "ar_status": "draft",
+      "source": "printed map label"
+    },
+    {
+      "id": "turath-centre",
+      "name": {
+        "en": "Turath Centre for Traditional Handicrafts",
+        "ar": "مركز تراث للحرف اليدوية التقليدية"
+      },
+      "category": "arts",
+      "icon": "culture",
+      "tier": 3,
+      "featured": false,
+      "generic": false,
+      "x": 0.1052,
+      "y": 0.6197,
+      "description": {
+        "en": "",
+        "ar": ""
+      },
+      "image": "",
+      "navigation": {
+        "mapsQuery": "Turath Centre Traditional Handicrafts Al Shindagha",
+        "googleMaps": "https://www.google.com/maps/search/?api=1&query=Turath+Centre+Traditional+Handicrafts+Al+Shindagha+Dubai",
+        "qr": "assets/qr/turath-centre.png"
+      },
+      "meta": {
+        "hours": "TBC",
+        "phone": "TBC",
+        "website": "TBC"
+      },
+      "ar_status": "draft",
+      "source": "printed map label"
+    },
+    {
+      "id": "saruq-al-hadid-museum",
+      "name": {
+        "en": "Saruq Al Hadid Archaeological Museum",
+        "ar": "متحف ساروق الحديد للآثار"
+      },
+      "category": "heritage",
+      "icon": "museum",
+      "tier": 2,
+      "featured": false,
+      "generic": false,
+      "x": 0.18,
+      "y": 0.6011,
+      "description": {
+        "en": "",
+        "ar": ""
+      },
+      "image": "",
+      "navigation": {
+        "mapsQuery": "Saruq Al Hadid Archaeology Museum Dubai",
+        "googleMaps": "https://www.google.com/maps/search/?api=1&query=Saruq+Al+Hadid+Archaeology+Museum+Dubai+Dubai",
+        "qr": "assets/qr/saruq-al-hadid-museum.png"
+      },
+      "meta": {
+        "hours": "TBC",
+        "phone": "TBC",
+        "website": "TBC"
+      },
+      "ar_status": "draft",
+      "source": "printed map label"
+    },
+    {
+      "id": "dubai-creek-birth-of-a-city",
+      "name": {
+        "en": "Dubai Creek: Birth of a City",
+        "ar": "خور دبي: ولادة مدينة"
+      },
+      "category": "heritage",
+      "icon": "pavilion",
+      "tier": 3,
+      "featured": false,
+      "generic": false,
+      "x": 0.1564,
+      "y": 0.6091,
+      "description": {
+        "en": "",
+        "ar": ""
+      },
+      "image": "",
+      "navigation": {
+        "mapsQuery": "Al Shindagha Museum Dubai Creek Birth of a City",
+        "googleMaps": "https://www.google.com/maps/search/?api=1&query=Al+Shindagha+Museum+Dubai+Creek+Birth+of+a+City+Dubai",
+        "qr": "assets/qr/dubai-creek-birth-of-a-city.png"
+      },
+      "meta": {
+        "hours": "TBC",
+        "phone": "TBC",
+        "website": "TBC"
+      },
+      "ar_status": "draft",
+      "source": "printed map label"
+    },
+    {
+      "id": "public-art-sculpture",
+      "name": {
+        "en": "Public Art Sculpture by Mattar Bin Lahej",
+        "ar": "منحوتة فنية عامة للفنان مطر بن لاحج"
+      },
+      "category": "arts",
+      "icon": "sculpture",
+      "tier": 3,
+      "featured": false,
+      "generic": false,
+      "x": 0.2184,
+      "y": 0.6798,
+      "description": {
+        "en": "",
+        "ar": ""
+      },
+      "image": "",
+      "navigation": {
+        "mapsQuery": "Al Shindagha Museum",
+        "googleMaps": "https://www.google.com/maps/search/?api=1&query=Al+Shindagha+Museum+Dubai",
+        "qr": "assets/qr/public-art-sculpture.png"
+      },
+      "meta": {
+        "hours": "TBC",
+        "phone": "TBC",
+        "website": "TBC"
+      },
+      "ar_status": "draft",
+      "source": "printed map label"
+    },
+    {
+      "id": "childrens-pavilion",
+      "name": {
+        "en": "Children's Pavilion",
+        "ar": "جناح الأطفال"
+      },
+      "category": "heritage",
+      "icon": "pavilion",
+      "tier": 3,
+      "featured": false,
+      "generic": false,
+      "x": 0.0629,
+      "y": 0.7128,
+      "description": {
+        "en": "",
+        "ar": ""
+      },
+      "image": "",
+      "navigation": {
+        "mapsQuery": "Al Shindagha Museum Children's Pavilion",
+        "googleMaps": "https://www.google.com/maps/search/?api=1&query=Al+Shindagha+Museum+Children's+Pavilion+Dubai",
+        "qr": "assets/qr/childrens-pavilion.png"
+      },
+      "meta": {
+        "hours": "TBC",
+        "phone": "TBC",
+        "website": "TBC"
+      },
+      "ar_status": "draft",
+      "source": "printed map label"
+    },
+    {
+      "id": "visitor-centre",
+      "name": {
+        "en": "Visitor Centre",
+        "ar": "مركز الزوار"
+      },
+      "category": "services",
+      "icon": "info",
+      "tier": 2,
+      "featured": false,
+      "generic": false,
+      "x": 0.1076,
+      "y": 0.7153,
+      "description": {
+        "en": "",
+        "ar": ""
+      },
+      "image": "",
+      "navigation": {
+        "mapsQuery": "Al Shindagha Museum Visitor Centre",
+        "googleMaps": "https://www.google.com/maps/search/?api=1&query=Al+Shindagha+Museum+Visitor+Centre+Dubai",
+        "qr": "assets/qr/visitor-centre.png"
+      },
+      "meta": {
+        "hours": "TBC",
+        "phone": "TBC",
+        "website": "TBC"
+      },
+      "ar_status": "draft",
+      "source": "printed map label"
+    },
+    {
+      "id": "arabian-boutique-hotel",
+      "name": {
+        "en": "Arabian Boutique Hotel",
+        "ar": "فندق أرابيان بوتيك"
+      },
+      "category": "stay",
+      "icon": "hotel",
+      "tier": 2,
+      "featured": false,
+      "generic": false,
+      "x": 0.2587,
+      "y": 0.6003,
+      "description": {
+        "en": "",
+        "ar": ""
+      },
+      "image": "",
+      "navigation": {
+        "mapsQuery": "Arabian Boutique Hotel Al Shindagha",
+        "googleMaps": "https://www.google.com/maps/search/?api=1&query=Arabian+Boutique+Hotel+Al+Shindagha+Dubai",
+        "qr": "assets/qr/arabian-boutique-hotel.png"
+      },
+      "meta": {
+        "hours": "TBC",
+        "phone": "TBC",
+        "website": "TBC"
+      },
+      "ar_status": "draft",
+      "source": "printed map label"
+    },
+    {
+      "id": "juthoor-art-center",
+      "name": {
+        "en": "Juthoor Art Center / House of Sheikh Khalifa bin Saeed Al Maktoum",
+        "ar": "مركز جذور للفنون / بيت الشيخ خليفة بن سعيد آل مكتوم"
+      },
+      "category": "arts",
+      "icon": "gallery",
+      "tier": 2,
+      "featured": false,
+      "generic": false,
+      "x": 0.2961,
+      "y": 0.6328,
+      "description": {
+        "en": "",
+        "ar": ""
+      },
+      "image": "",
+      "navigation": {
+        "mapsQuery": "Juthoor Art Center Al Shindagha",
+        "googleMaps": "https://www.google.com/maps/search/?api=1&query=Juthoor+Art+Center+Al+Shindagha+Dubai",
+        "qr": "assets/qr/juthoor-art-center.png"
+      },
+      "meta": {
+        "hours": "TBC",
+        "phone": "TBC",
+        "website": "TBC"
+      },
+      "ar_status": "draft",
+      "source": "printed map label"
+    },
+    {
+      "id": "al-shindagha-square",
+      "name": {
+        "en": "Al Shindagha Square",
+        "ar": "ساحة الشندغة"
+      },
+      "category": "landmarks",
+      "icon": "square",
+      "tier": 3,
+      "featured": false,
+      "generic": false,
+      "x": 0.2878,
+      "y": 0.6997,
+      "description": {
+        "en": "",
+        "ar": ""
+      },
+      "image": "",
+      "navigation": {
+        "mapsQuery": "Al Shindagha Square",
+        "googleMaps": "https://www.google.com/maps/search/?api=1&query=Al+Shindagha+Square+Dubai",
+        "qr": "assets/qr/al-shindagha-square.png"
+      },
+      "meta": {
+        "hours": "TBC",
+        "phone": "TBC",
+        "website": "TBC"
+      },
+      "ar_status": "draft",
+      "source": "printed map label"
+    },
+    {
+      "id": "infinity-bridge",
+      "name": {
+        "en": "Infinity Bridge",
+        "ar": "جسر إنفينيتي"
+      },
+      "category": "landmarks",
+      "icon": "bridge",
+      "tier": 2,
+      "featured": false,
+      "generic": false,
+      "x": 0.2793,
+      "y": 0.0529,
+      "description": {
+        "en": "",
+        "ar": ""
+      },
+      "image": "",
+      "navigation": {
+        "mapsQuery": "Infinity Bridge Dubai",
+        "googleMaps": "https://www.google.com/maps/search/?api=1&query=Infinity+Bridge+Dubai+Dubai",
+        "qr": "assets/qr/infinity-bridge.png"
+      },
+      "meta": {
+        "hours": "TBC",
+        "phone": "TBC",
+        "website": "TBC"
+      },
+      "ar_status": "draft",
+      "source": "printed map label"
+    },
+    {
+      "id": "western-tower",
+      "name": {
+        "en": "Western Tower",
+        "ar": "البرج الغربي"
+      },
+      "category": "heritage",
+      "icon": "tower",
+      "tier": 3,
+      "featured": false,
+      "generic": false,
+      "x": 0.4265,
+      "y": 0.7073,
+      "description": {
+        "en": "",
+        "ar": ""
+      },
+      "image": "",
+      "navigation": {
+        "mapsQuery": "Western Tower Bur Dubai",
+        "googleMaps": "https://www.google.com/maps/search/?api=1&query=Western+Tower+Bur+Dubai+Dubai",
+        "qr": "assets/qr/western-tower.png"
+      },
+      "meta": {
+        "hours": "TBC",
+        "phone": "TBC",
+        "website": "TBC"
+      },
+      "ar_status": "draft",
+      "source": "printed map label"
+    },
+    {
+      "id": "bur-dubai-grand-souq",
+      "name": {
+        "en": "Bur Dubai Grand Souq",
+        "ar": "سوق بر دبي الكبير"
+      },
+      "category": "souks",
+      "icon": "souq",
+      "tier": 1,
+      "featured": false,
+      "generic": false,
+      "x": 0.4205,
+      "y": 0.7445,
+      "description": {
+        "en": "",
+        "ar": ""
+      },
+      "image": "",
+      "navigation": {
+        "mapsQuery": "Bur Dubai Grand Souq",
+        "googleMaps": "https://www.google.com/maps/search/?api=1&query=Bur+Dubai+Grand+Souq+Dubai",
+        "qr": "assets/qr/bur-dubai-grand-souq.png"
+      },
+      "meta": {
+        "hours": "TBC",
+        "phone": "TBC",
+        "website": "TBC"
+      },
+      "ar_status": "draft",
+      "source": "printed map label"
+    },
+    {
+      "id": "food-souq",
+      "name": {
+        "en": "Food Souq",
+        "ar": "سوق الطعام"
+      },
+      "category": "souks",
+      "icon": "souq",
+      "tier": 3,
+      "featured": false,
+      "generic": false,
+      "x": 0.4496,
+      "y": 0.7953,
+      "description": {
+        "en": "",
+        "ar": ""
+      },
+      "image": "",
+      "navigation": {
+        "mapsQuery": "Bur Dubai Grand Souq",
+        "googleMaps": "https://www.google.com/maps/search/?api=1&query=Bur+Dubai+Grand+Souq+Dubai",
+        "qr": "assets/qr/food-souq.png"
+      },
+      "meta": {
+        "hours": "TBC",
+        "phone": "TBC",
+        "website": "TBC"
+      },
+      "ar_status": "draft",
+      "source": "printed map label"
+    },
+    {
+      "id": "textile-market-bur-dubai",
+      "name": {
+        "en": "Textile Market Bur Dubai",
+        "ar": "سوق الأقمشة في بر دبي"
+      },
+      "category": "souks",
+      "icon": "souq",
+      "tier": 2,
+      "featured": false,
+      "generic": false,
+      "x": 0.5191,
+      "y": 0.7255,
+      "description": {
+        "en": "",
+        "ar": ""
+      },
+      "image": "",
+      "navigation": {
+        "mapsQuery": "Textile Souk Bur Dubai",
+        "googleMaps": "https://www.google.com/maps/search/?api=1&query=Textile+Souk+Bur+Dubai+Dubai",
+        "qr": "assets/qr/textile-market-bur-dubai.png"
+      },
+      "meta": {
+        "hours": "TBC",
+        "phone": "TBC",
+        "website": "TBC"
+      },
+      "ar_status": "draft",
+      "source": "printed map label"
+    },
+    {
+      "id": "sardana-souq",
+      "name": {
+        "en": "Sardana Souq",
+        "ar": "سوق سردانة"
+      },
+      "category": "souks",
+      "icon": "souq",
+      "tier": 3,
+      "featured": false,
+      "generic": false,
+      "x": 0.5443,
+      "y": 0.7398,
+      "description": {
+        "en": "",
+        "ar": ""
+      },
+      "image": "",
+      "navigation": {
+        "mapsQuery": "Bur Dubai Grand Souq",
+        "googleMaps": "https://www.google.com/maps/search/?api=1&query=Bur+Dubai+Grand+Souq+Dubai",
+        "qr": "assets/qr/sardana-souq.png"
+      },
+      "meta": {
+        "hours": "TBC",
+        "phone": "TBC",
+        "website": "TBC"
+      },
+      "ar_status": "draft",
+      "source": "printed map label"
+    },
+    {
+      "id": "barjeel-souq",
+      "name": {
+        "en": "Barjeel Souq",
+        "ar": "سوق البارجيل"
+      },
+      "category": "souks",
+      "icon": "souq",
+      "tier": 3,
+      "featured": false,
+      "generic": false,
+      "x": 0.6007,
+      "y": 0.6227,
+      "description": {
+        "en": "",
+        "ar": ""
+      },
+      "image": "",
+      "navigation": {
+        "mapsQuery": "Bur Dubai Grand Souq",
+        "googleMaps": "https://www.google.com/maps/search/?api=1&query=Bur+Dubai+Grand+Souq+Dubai",
+        "qr": "assets/qr/barjeel-souq.png"
+      },
+      "meta": {
+        "hours": "TBC",
+        "phone": "TBC",
+        "website": "TBC"
+      },
+      "ar_status": "draft",
+      "source": "printed map label"
+    },
+    {
+      "id": "grand-masjid-bur-dubai",
+      "name": {
+        "en": "Grand Masjid Bur Dubai",
+        "ar": "المسجد الكبير في بر دبي"
+      },
+      "category": "landmarks",
+      "icon": "mosque",
+      "tier": 2,
+      "featured": false,
+      "generic": false,
+      "x": 0.5798,
+      "y": 0.7517,
+      "description": {
+        "en": "",
+        "ar": ""
+      },
+      "image": "",
+      "navigation": {
+        "mapsQuery": "Grand Mosque Bur Dubai",
+        "googleMaps": "https://www.google.com/maps/search/?api=1&query=Grand+Mosque+Bur+Dubai+Dubai",
+        "qr": "assets/qr/grand-masjid-bur-dubai.png"
+      },
+      "meta": {
+        "hours": "TBC",
+        "phone": "TBC",
+        "website": "TBC"
+      },
+      "ar_status": "draft",
+      "source": "printed map label"
+    },
+    {
+      "id": "public-square",
+      "name": {
+        "en": "Public Square",
+        "ar": "الساحة العامة"
+      },
+      "category": "landmarks",
+      "icon": "square",
+      "tier": 3,
+      "featured": false,
+      "generic": false,
+      "x": 0.5315,
+      "y": 0.7855,
+      "description": {
+        "en": "",
+        "ar": ""
+      },
+      "image": "",
+      "navigation": {
+        "mapsQuery": "Al Fahidi Historical Neighbourhood",
+        "googleMaps": "https://www.google.com/maps/search/?api=1&query=Al+Fahidi+Historical+Neighbourhood+Dubai",
+        "qr": "assets/qr/public-square.png"
+      },
+      "meta": {
+        "hours": "TBC",
+        "phone": "TBC",
+        "website": "TBC"
+      },
+      "ar_status": "draft",
+      "source": "printed map label"
+    },
+    {
+      "id": "wall-of-old-dubai",
+      "name": {
+        "en": "Wall of Old Dubai",
+        "ar": "سور دبي القديم"
+      },
+      "category": "heritage",
+      "icon": "wall",
+      "tier": 2,
+      "featured": false,
+      "generic": false,
+      "x": 0.6442,
+      "y": 0.731,
+      "description": {
+        "en": "",
+        "ar": ""
+      },
+      "image": "",
+      "navigation": {
+        "mapsQuery": "Old Dubai Wall Al Fahidi",
+        "googleMaps": "https://www.google.com/maps/search/?api=1&query=Old+Dubai+Wall+Al+Fahidi+Dubai",
+        "qr": "assets/qr/wall-of-old-dubai.png"
+      },
+      "meta": {
+        "hours": "TBC",
+        "phone": "TBC",
+        "website": "TBC"
+      },
+      "ar_status": "draft",
+      "source": "printed map label"
+    },
+    {
+      "id": "al-fahidi-tower",
+      "name": {
+        "en": "Al Fahidi Tower",
+        "ar": "برج الفهيدي"
+      },
+      "category": "heritage",
+      "icon": "tower",
+      "tier": 3,
+      "featured": false,
+      "generic": false,
+      "x": 0.6463,
+      "y": 0.8109,
+      "description": {
+        "en": "",
+        "ar": ""
+      },
+      "image": "",
+      "navigation": {
+        "mapsQuery": "Al Fahidi Fort",
+        "googleMaps": "https://www.google.com/maps/search/?api=1&query=Al+Fahidi+Fort+Dubai",
+        "qr": "assets/qr/al-fahidi-tower.png"
+      },
+      "meta": {
+        "hours": "TBC",
+        "phone": "TBC",
+        "website": "TBC"
+      },
+      "ar_status": "draft",
+      "source": "printed map label"
+    },
+    {
+      "id": "al-fahidi-fort",
+      "name": {
+        "en": "Al Fahidi Fort",
+        "ar": "حصن الفهيدي"
+      },
+      "category": "heritage",
+      "icon": "fort",
+      "tier": 1,
+      "featured": false,
+      "generic": false,
+      "x": 0.6235,
+      "y": 0.8541,
+      "description": {
+        "en": "",
+        "ar": ""
+      },
+      "image": "",
+      "navigation": {
+        "mapsQuery": "Al Fahidi Fort Dubai Museum",
+        "googleMaps": "https://www.google.com/maps/search/?api=1&query=Al+Fahidi+Fort+Dubai+Museum+Dubai",
+        "qr": "assets/qr/al-fahidi-fort.png"
+      },
+      "meta": {
+        "hours": "TBC",
+        "phone": "TBC",
+        "website": "TBC"
+      },
+      "ar_status": "draft",
+      "source": "printed map label"
+    },
+    {
+      "id": "historical-buildings",
+      "name": {
+        "en": "Historical Buildings",
+        "ar": "المباني التاريخية"
+      },
+      "category": "heritage",
+      "icon": "house",
+      "tier": 3,
+      "featured": false,
+      "generic": false,
+      "x": 0.4938,
+      "y": 0.8972,
+      "description": {
+        "en": "",
+        "ar": ""
+      },
+      "image": "",
+      "navigation": {
+        "mapsQuery": "Al Fahidi Street Dubai historical buildings",
+        "googleMaps": "https://www.google.com/maps/search/?api=1&query=Al+Fahidi+Street+Dubai+historical+buildings+Dubai",
+        "qr": "assets/qr/historical-buildings.png"
+      },
+      "meta": {
+        "hours": "TBC",
+        "phone": "TBC",
+        "website": "TBC"
+      },
+      "ar_status": "draft",
+      "source": "printed map label"
+    },
+    {
+      "id": "the-souq-tower",
+      "name": {
+        "en": "The Souq Tower",
+        "ar": "برج السوق"
+      },
+      "category": "heritage",
+      "icon": "tower",
+      "tier": 3,
+      "featured": false,
+      "generic": false,
+      "x": 0.5655,
+      "y": 0.8773,
+      "description": {
+        "en": "",
+        "ar": ""
+      },
+      "image": "",
+      "navigation": {
+        "mapsQuery": "Al Fahidi Fort",
+        "googleMaps": "https://www.google.com/maps/search/?api=1&query=Al+Fahidi+Fort+Dubai",
+        "qr": "assets/qr/the-souq-tower.png"
+      },
+      "meta": {
+        "hours": "TBC",
+        "phone": "TBC",
+        "website": "TBC"
+      },
+      "ar_status": "draft",
+      "source": "printed map label"
+    },
+    {
+      "id": "dar-al-nadwa",
+      "name": {
+        "en": "Dar Al Nadwa (Dubai Culture & Arts Authority)",
+        "ar": "دار الندوة (هيئة الثقافة والفنون في دبي)"
+      },
+      "category": "arts",
+      "icon": "culture",
+      "tier": 2,
+      "featured": false,
+      "generic": false,
+      "x": 0.7185,
+      "y": 0.6256,
+      "description": {
+        "en": "",
+        "ar": ""
+      },
+      "image": "",
+      "navigation": {
+        "mapsQuery": "Dar Al Nadwa Al Fahidi",
+        "googleMaps": "https://www.google.com/maps/search/?api=1&query=Dar+Al+Nadwa+Al+Fahidi+Dubai",
+        "qr": "assets/qr/dar-al-nadwa.png"
+      },
+      "meta": {
+        "hours": "TBC",
+        "phone": "TBC",
+        "website": "TBC"
+      },
+      "ar_status": "draft",
+      "source": "printed map label"
+    },
+    {
+      "id": "architectural-heritage-society",
+      "name": {
+        "en": "Architectural Heritage Society",
+        "ar": "جمعية التراث العمراني"
+      },
+      "category": "arts",
+      "icon": "culture",
+      "tier": 3,
+      "featured": false,
+      "generic": false,
+      "x": 0.6687,
+      "y": 0.6557,
+      "description": {
+        "en": "",
+        "ar": ""
+      },
+      "image": "",
+      "navigation": {
+        "mapsQuery": "Architectural Heritage Society Al Fahidi",
+        "googleMaps": "https://www.google.com/maps/search/?api=1&query=Architectural+Heritage+Society+Al+Fahidi+Dubai",
+        "qr": "assets/qr/architectural-heritage-society.png"
+      },
+      "meta": {
+        "hours": "TBC",
+        "phone": "TBC",
+        "website": "TBC"
+      },
+      "ar_status": "draft",
+      "source": "printed map label"
+    },
+    {
+      "id": "coins-museum",
+      "name": {
+        "en": "Coins Museum",
+        "ar": "متحف العملات"
+      },
+      "category": "heritage",
+      "icon": "museum",
+      "tier": 2,
+      "featured": false,
+      "generic": false,
+      "x": 0.7282,
+      "y": 0.6548,
+      "description": {
+        "en": "",
+        "ar": ""
+      },
+      "image": "",
+      "navigation": {
+        "mapsQuery": "Coins Museum Al Fahidi Dubai",
+        "googleMaps": "https://www.google.com/maps/search/?api=1&query=Coins+Museum+Al+Fahidi+Dubai+Dubai",
+        "qr": "assets/qr/coins-museum.png"
+      },
+      "meta": {
+        "hours": "TBC",
+        "phone": "TBC",
+        "website": "TBC"
+      },
+      "ar_status": "draft",
+      "source": "printed map label"
+    },
+    {
+      "id": "the-traditional-emirati-house",
+      "name": {
+        "en": "The Traditional Emirati House",
+        "ar": "البيت الإماراتي التقليدي"
+      },
+      "category": "heritage",
+      "icon": "house",
+      "tier": 3,
+      "featured": false,
+      "generic": false,
+      "x": 0.7097,
+      "y": 0.7225,
+      "description": {
+        "en": "",
+        "ar": ""
+      },
+      "image": "",
+      "navigation": {
+        "mapsQuery": "Traditional Emirati House Al Fahidi",
+        "googleMaps": "https://www.google.com/maps/search/?api=1&query=Traditional+Emirati+House+Al+Fahidi+Dubai",
+        "qr": "assets/qr/the-traditional-emirati-house.png"
+      },
+      "meta": {
+        "hours": "TBC",
+        "phone": "TBC",
+        "website": "TBC"
+      },
+      "ar_status": "draft",
+      "source": "printed map label"
+    },
+    {
+      "id": "emirates-writers-union",
+      "name": {
+        "en": "Emirates Writers Union",
+        "ar": "اتحاد كتّاب وأدباء الإمارات"
+      },
+      "category": "arts",
+      "icon": "culture",
+      "tier": 3,
+      "featured": false,
+      "generic": false,
+      "x": 0.7641,
+      "y": 0.72,
+      "description": {
+        "en": "",
+        "ar": ""
+      },
+      "image": "",
+      "navigation": {
+        "mapsQuery": "Emirates Writers Union Al Fahidi",
+        "googleMaps": "https://www.google.com/maps/search/?api=1&query=Emirates+Writers+Union+Al+Fahidi+Dubai",
+        "qr": "assets/qr/emirates-writers-union.png"
+      },
+      "meta": {
+        "hours": "TBC",
+        "phone": "TBC",
+        "website": "TBC"
+      },
+      "ar_status": "draft",
+      "source": "printed map label"
+    },
+    {
+      "id": "zey-khanyar",
+      "name": {
+        "en": "Zey Khanyar",
+        "ar": "زي خنيار"
+      },
+      "category": "arts",
+      "icon": "gallery",
+      "tier": 3,
+      "featured": false,
+      "generic": false,
+      "x": 0.7705,
+      "y": 0.7475,
+      "description": {
+        "en": "",
+        "ar": ""
+      },
+      "image": "",
+      "navigation": {
+        "mapsQuery": "Zey Khanyar Al Fahidi",
+        "googleMaps": "https://www.google.com/maps/search/?api=1&query=Zey+Khanyar+Al+Fahidi+Dubai",
+        "qr": "assets/qr/zey-khanyar.png"
+      },
+      "meta": {
+        "hours": "TBC",
+        "phone": "TBC",
+        "website": "TBC"
+      },
+      "ar_status": "draft",
+      "source": "printed map label"
+    },
+    {
+      "id": "bayt-al-khanyar",
+      "name": {
+        "en": "Bayt Al Khanyar Museum and Coffee Shop",
+        "ar": "متحف ومقهى بيت الخنيار"
+      },
+      "category": "heritage",
+      "icon": "museum",
+      "tier": 3,
+      "featured": false,
+      "generic": false,
+      "x": 0.7841,
+      "y": 0.7703,
+      "description": {
+        "en": "",
+        "ar": ""
+      },
+      "image": "",
+      "navigation": {
+        "mapsQuery": "Bayt Al Khanyar Al Fahidi",
+        "googleMaps": "https://www.google.com/maps/search/?api=1&query=Bayt+Al+Khanyar+Al+Fahidi+Dubai",
+        "qr": "assets/qr/bayt-al-khanyar.png"
+      },
+      "meta": {
+        "hours": "TBC",
+        "phone": "TBC",
+        "website": "TBC"
+      },
+      "ar_status": "draft",
+      "source": "printed map label"
+    },
+    {
+      "id": "fatma-lootah-gallery",
+      "name": {
+        "en": "Fatma Lootah Gallery",
+        "ar": "غاليري فاطمة لوتاه"
+      },
+      "category": "arts",
+      "icon": "gallery",
+      "tier": 2,
+      "featured": false,
+      "generic": false,
+      "x": 0.7061,
+      "y": 0.794,
+      "description": {
+        "en": "",
+        "ar": ""
+      },
+      "image": "",
+      "navigation": {
+        "mapsQuery": "Fatma Lootah Gallery Al Fahidi",
+        "googleMaps": "https://www.google.com/maps/search/?api=1&query=Fatma+Lootah+Gallery+Al+Fahidi+Dubai",
+        "qr": "assets/qr/fatma-lootah-gallery.png"
+      },
+      "meta": {
+        "hours": "TBC",
+        "phone": "TBC",
+        "website": "TBC"
+      },
+      "ar_status": "draft",
+      "source": "printed map label"
+    },
+    {
+      "id": "police-museum",
+      "name": {
+        "en": "Police Museum",
+        "ar": "متحف الشرطة"
+      },
+      "category": "heritage",
+      "icon": "museum",
+      "tier": 3,
+      "featured": false,
+      "generic": false,
+      "x": 0.787,
+      "y": 0.8299,
+      "description": {
+        "en": "",
+        "ar": ""
+      },
+      "image": "",
+      "navigation": {
+        "mapsQuery": "Police Museum Al Fahidi Dubai",
+        "googleMaps": "https://www.google.com/maps/search/?api=1&query=Police+Museum+Al+Fahidi+Dubai+Dubai",
+        "qr": "assets/qr/police-museum.png"
+      },
+      "meta": {
+        "hours": "TBC",
+        "phone": "TBC",
+        "website": "TBC"
+      },
+      "ar_status": "draft",
+      "source": "printed map label"
+    },
+    {
+      "id": "the-majlis-gallery",
+      "name": {
+        "en": "The Majlis Gallery",
+        "ar": "غاليري المجلس"
+      },
+      "category": "arts",
+      "icon": "gallery",
+      "tier": 2,
+      "featured": false,
+      "generic": false,
+      "x": 0.7785,
+      "y": 0.8541,
+      "description": {
+        "en": "",
+        "ar": ""
+      },
+      "image": "",
+      "navigation": {
+        "mapsQuery": "The Majlis Gallery Al Fahidi",
+        "googleMaps": "https://www.google.com/maps/search/?api=1&query=The+Majlis+Gallery+Al+Fahidi+Dubai",
+        "qr": "assets/qr/the-majlis-gallery.png"
+      },
+      "meta": {
+        "hours": "TBC",
+        "phone": "TBC",
+        "website": "TBC"
+      },
+      "ar_status": "draft",
+      "source": "printed map label"
+    },
+    {
+      "id": "al-seef-heritage-hotel",
+      "name": {
+        "en": "Al Seef Heritage Hotel Dubai, Curio Collection by Hilton",
+        "ar": "فندق السيف التراثي دبي، كيوريو كوليكشن باي هيلتون"
+      },
+      "category": "stay",
+      "icon": "hotel",
+      "tier": 2,
+      "featured": false,
+      "generic": false,
+      "x": 0.8567,
+      "y": 0.673,
+      "description": {
+        "en": "",
+        "ar": ""
+      },
+      "image": "",
+      "navigation": {
+        "mapsQuery": "Al Seef Heritage Hotel Dubai Curio Collection by Hilton",
+        "googleMaps": "https://www.google.com/maps/search/?api=1&query=Al+Seef+Heritage+Hotel+Dubai+Curio+Collection+by+Hilton+Dubai",
+        "qr": "assets/qr/al-seef-heritage-hotel.png"
+      },
+      "meta": {
+        "hours": "TBC",
+        "phone": "TBC",
+        "website": "TBC"
+      },
+      "ar_status": "draft",
+      "source": "printed map label"
+    },
+    {
+      "id": "starbucks-reserve",
+      "name": {
+        "en": "Starbucks Reserve",
+        "ar": "ستاربكس ريزيرف"
+      },
+      "category": "food",
+      "icon": "cafe",
+      "tier": 3,
+      "featured": false,
+      "generic": false,
+      "x": 0.8701,
+      "y": 0.5546,
+      "description": {
+        "en": "",
+        "ar": ""
+      },
+      "image": "",
+      "navigation": {
+        "mapsQuery": "Starbucks Reserve Al Seef",
+        "googleMaps": "https://www.google.com/maps/search/?api=1&query=Starbucks+Reserve+Al+Seef+Dubai",
+        "qr": "assets/qr/starbucks-reserve.png"
+      },
+      "meta": {
+        "hours": "TBC",
+        "phone": "TBC",
+        "website": "TBC"
+      },
+      "ar_status": "draft",
+      "source": "printed map label"
+    },
+    {
+      "id": "souk-al-seef",
+      "name": {
+        "en": "Souk Al Seef",
+        "ar": "سوق السيف"
+      },
+      "category": "souks",
+      "icon": "souq",
+      "tier": 1,
+      "featured": false,
+      "generic": false,
+      "x": 0.9252,
+      "y": 0.5715,
+      "description": {
+        "en": "",
+        "ar": ""
+      },
+      "image": "",
+      "navigation": {
+        "mapsQuery": "Souk Al Seef Dubai",
+        "googleMaps": "https://www.google.com/maps/search/?api=1&query=Souk+Al+Seef+Dubai+Dubai",
+        "qr": "assets/qr/souk-al-seef.png"
+      },
+      "meta": {
+        "hours": "TBC",
+        "phone": "TBC",
+        "website": "TBC"
+      },
+      "ar_status": "draft",
+      "source": "printed map label"
+    },
+    {
+      "id": "dubai-gold-district",
+      "name": {
+        "en": "Dubai Gold District",
+        "ar": "منطقة الذهب في دبي"
+      },
+      "category": "souks",
+      "icon": "souq",
+      "tier": 2,
+      "featured": false,
+      "generic": false,
+      "x": 0.5091,
+      "y": 0.1036,
+      "description": {
+        "en": "",
+        "ar": ""
+      },
+      "image": "",
+      "navigation": {
+        "mapsQuery": "Gold Souk Deira",
+        "googleMaps": "https://www.google.com/maps/search/?api=1&query=Gold+Souk+Deira+Dubai",
+        "qr": "assets/qr/dubai-gold-district.png"
+      },
+      "meta": {
+        "hours": "TBC",
+        "phone": "TBC",
+        "website": "TBC"
+      },
+      "ar_status": "draft",
+      "source": "printed map label"
+    },
+    {
+      "id": "deira-gold-souq",
+      "name": {
+        "en": "Deira Gold Souq",
+        "ar": "سوق الذهب في ديرة"
+      },
+      "category": "souks",
+      "icon": "souq",
+      "tier": 1,
+      "featured": false,
+      "generic": false,
+      "x": 0.5759,
+      "y": 0.2335,
+      "description": {
+        "en": "",
+        "ar": ""
+      },
+      "image": "",
+      "navigation": {
+        "mapsQuery": "Deira Gold Souk",
+        "googleMaps": "https://www.google.com/maps/search/?api=1&query=Deira+Gold+Souk+Dubai",
+        "qr": "assets/qr/deira-gold-souq.png"
+      },
+      "meta": {
+        "hours": "TBC",
+        "phone": "TBC",
+        "website": "TBC"
+      },
+      "ar_status": "draft",
+      "source": "printed map label"
+    },
+    {
+      "id": "belhoul-mosque",
+      "name": {
+        "en": "Belhoul Mosque",
+        "ar": "مسجد بالهول"
+      },
+      "category": "landmarks",
+      "icon": "mosque",
+      "tier": 2,
+      "featured": false,
+      "generic": false,
+      "x": 0.6327,
+      "y": 0.2365,
+      "description": {
+        "en": "",
+        "ar": ""
+      },
+      "image": "",
+      "navigation": {
+        "mapsQuery": "Belhoul Mosque Deira",
+        "googleMaps": "https://www.google.com/maps/search/?api=1&query=Belhoul+Mosque+Deira+Dubai",
+        "qr": "assets/qr/belhoul-mosque.png"
+      },
+      "meta": {
+        "hours": "TBC",
+        "phone": "TBC",
+        "website": "TBC"
+      },
+      "ar_status": "draft",
+      "source": "printed map label"
+    },
+    {
+      "id": "utensils-souq",
+      "name": {
+        "en": "Utensils Souq",
+        "ar": "سوق الأواني"
+      },
+      "category": "souks",
+      "icon": "souq",
+      "tier": 3,
+      "featured": false,
+      "generic": false,
+      "x": 0.6398,
+      "y": 0.2576,
+      "description": {
+        "en": "",
+        "ar": ""
+      },
+      "image": "",
+      "navigation": {
+        "mapsQuery": "Deira Grand Souq",
+        "googleMaps": "https://www.google.com/maps/search/?api=1&query=Deira+Grand+Souq+Dubai",
+        "qr": "assets/qr/utensils-souq.png"
+      },
+      "meta": {
+        "hours": "TBC",
+        "phone": "TBC",
+        "website": "TBC"
+      },
+      "ar_status": "draft",
+      "source": "printed map label"
+    },
+    {
+      "id": "textile-souq",
+      "name": {
+        "en": "Textile Souq",
+        "ar": "سوق الأقمشة"
+      },
+      "category": "souks",
+      "icon": "souq",
+      "tier": 3,
+      "featured": false,
+      "generic": false,
+      "x": 0.5783,
+      "y": 0.2766,
+      "description": {
+        "en": "",
+        "ar": ""
+      },
+      "image": "",
+      "navigation": {
+        "mapsQuery": "Deira Grand Souq",
+        "googleMaps": "https://www.google.com/maps/search/?api=1&query=Deira+Grand+Souq+Dubai",
+        "qr": "assets/qr/textile-souq.png"
+      },
+      "meta": {
+        "hours": "TBC",
+        "phone": "TBC",
+        "website": "TBC"
+      },
+      "ar_status": "draft",
+      "source": "printed map label"
+    },
+    {
+      "id": "mattress-souq",
+      "name": {
+        "en": "Mattress Souq",
+        "ar": "سوق الفرش"
+      },
+      "category": "souks",
+      "icon": "souq",
+      "tier": 3,
+      "featured": false,
+      "generic": false,
+      "x": 0.5621,
+      "y": 0.297,
+      "description": {
+        "en": "",
+        "ar": ""
+      },
+      "image": "",
+      "navigation": {
+        "mapsQuery": "Deira Grand Souq",
+        "googleMaps": "https://www.google.com/maps/search/?api=1&query=Deira+Grand+Souq+Dubai",
+        "qr": "assets/qr/mattress-souq.png"
+      },
+      "meta": {
+        "hours": "TBC",
+        "phone": "TBC",
+        "website": "TBC"
+      },
+      "ar_status": "draft",
+      "source": "printed map label"
+    },
+    {
+      "id": "al-manather-souq",
+      "name": {
+        "en": "Al Manather Souq",
+        "ar": "سوق المناظر"
+      },
+      "category": "souks",
+      "icon": "souq",
+      "tier": 3,
+      "featured": false,
+      "generic": false,
+      "x": 0.6174,
+      "y": 0.3105,
+      "description": {
+        "en": "",
+        "ar": ""
+      },
+      "image": "",
+      "navigation": {
+        "mapsQuery": "Deira Grand Souq",
+        "googleMaps": "https://www.google.com/maps/search/?api=1&query=Deira+Grand+Souq+Dubai",
+        "qr": "assets/qr/al-manather-souq.png"
+      },
+      "meta": {
+        "hours": "TBC",
+        "phone": "TBC",
+        "website": "TBC"
+      },
+      "ar_status": "draft",
+      "source": "printed map label"
+    },
+    {
+      "id": "saffareen-souq",
+      "name": {
+        "en": "Saffareen Souq",
+        "ar": "سوق الصفارين"
+      },
+      "category": "souks",
+      "icon": "souq",
+      "tier": 3,
+      "featured": false,
+      "generic": false,
+      "x": 0.548,
+      "y": 0.3168,
+      "description": {
+        "en": "",
+        "ar": ""
+      },
+      "image": "",
+      "navigation": {
+        "mapsQuery": "Deira Grand Souq",
+        "googleMaps": "https://www.google.com/maps/search/?api=1&query=Deira+Grand+Souq+Dubai",
+        "qr": "assets/qr/saffareen-souq.png"
+      },
+      "meta": {
+        "hours": "TBC",
+        "phone": "TBC",
+        "website": "TBC"
+      },
+      "ar_status": "draft",
+      "source": "printed map label"
+    },
+    {
+      "id": "al-ahmadiya-square",
+      "name": {
+        "en": "Al Ahmadiya Square",
+        "ar": "ساحة الأحمدية"
+      },
+      "category": "landmarks",
+      "icon": "square",
+      "tier": 3,
+      "featured": false,
+      "generic": false,
+      "x": 0.5118,
+      "y": 0.3295,
+      "description": {
+        "en": "",
+        "ar": ""
+      },
+      "image": "",
+      "navigation": {
+        "mapsQuery": "Al Ahmadiya Square Deira",
+        "googleMaps": "https://www.google.com/maps/search/?api=1&query=Al+Ahmadiya+Square+Deira+Dubai",
+        "qr": "assets/qr/al-ahmadiya-square.png"
+      },
+      "meta": {
+        "hours": "TBC",
+        "phone": "TBC",
+        "website": "TBC"
+      },
+      "ar_status": "draft",
+      "source": "printed map label"
+    },
+    {
+      "id": "deira-grand-souq",
+      "name": {
+        "en": "Deira Grand Souq",
+        "ar": "سوق ديرة الكبير"
+      },
+      "category": "souks",
+      "icon": "souq",
+      "tier": 2,
+      "featured": false,
+      "generic": false,
+      "x": 0.6461,
+      "y": 0.3253,
+      "description": {
+        "en": "",
+        "ar": ""
+      },
+      "image": "",
+      "navigation": {
+        "mapsQuery": "Deira Grand Souq",
+        "googleMaps": "https://www.google.com/maps/search/?api=1&query=Deira+Grand+Souq+Dubai",
+        "qr": "assets/qr/deira-grand-souq.png"
+      },
+      "meta": {
+        "hours": "TBC",
+        "phone": "TBC",
+        "website": "TBC"
+      },
+      "ar_status": "draft",
+      "source": "printed map label"
+    },
+    {
+      "id": "al-arsa-souq",
+      "name": {
+        "en": "Al Arsa Souq",
+        "ar": "سوق العرصة"
+      },
+      "category": "souks",
+      "icon": "souq",
+      "tier": 3,
+      "featured": false,
+      "generic": false,
+      "x": 0.5812,
+      "y": 0.3583,
+      "description": {
+        "en": "",
+        "ar": ""
+      },
+      "image": "",
+      "navigation": {
+        "mapsQuery": "Deira Grand Souq",
+        "googleMaps": "https://www.google.com/maps/search/?api=1&query=Deira+Grand+Souq+Dubai",
+        "qr": "assets/qr/al-arsa-souq.png"
+      },
+      "meta": {
+        "hours": "TBC",
+        "phone": "TBC",
+        "website": "TBC"
+      },
+      "ar_status": "draft",
+      "source": "printed map label"
+    },
+    {
+      "id": "al-ahmadiya-school",
+      "name": {
+        "en": "Al Ahmadiya School",
+        "ar": "مدرسة الأحمدية"
+      },
+      "category": "heritage",
+      "icon": "school",
+      "tier": 2,
+      "featured": false,
+      "generic": false,
+      "x": 0.4666,
+      "y": 0.3858,
+      "description": {
+        "en": "",
+        "ar": ""
+      },
+      "image": "",
+      "navigation": {
+        "mapsQuery": "Al Ahmadiya School Deira",
+        "googleMaps": "https://www.google.com/maps/search/?api=1&query=Al+Ahmadiya+School+Deira+Dubai",
+        "qr": "assets/qr/al-ahmadiya-school.png"
+      },
+      "meta": {
+        "hours": "TBC",
+        "phone": "TBC",
+        "website": "TBC"
+      },
+      "ar_status": "draft",
+      "source": "printed map label"
+    },
+    {
+      "id": "perfume-souq",
+      "name": {
+        "en": "Perfume Souq",
+        "ar": "سوق العطور"
+      },
+      "category": "souks",
+      "icon": "souq",
+      "tier": 2,
+      "featured": false,
+      "generic": false,
+      "x": 0.5453,
+      "y": 0.4074,
+      "description": {
+        "en": "",
+        "ar": ""
+      },
+      "image": "",
+      "navigation": {
+        "mapsQuery": "Perfume Souk Deira",
+        "googleMaps": "https://www.google.com/maps/search/?api=1&query=Perfume+Souk+Deira+Dubai",
+        "qr": "assets/qr/perfume-souq.png"
+      },
+      "meta": {
+        "hours": "TBC",
+        "phone": "TBC",
+        "website": "TBC"
+      },
+      "ar_status": "draft",
+      "source": "printed map label"
+    },
+    {
+      "id": "al-hameli-house-inn",
+      "name": {
+        "en": "Al Hameli House - Inn",
+        "ar": "بيت الهاملي - نُزل"
+      },
+      "category": "stay",
+      "icon": "hotel",
+      "tier": 2,
+      "featured": false,
+      "generic": false,
+      "x": 0.5069,
+      "y": 0.4175,
+      "description": {
+        "en": "",
+        "ar": ""
+      },
+      "image": "",
+      "navigation": {
+        "mapsQuery": "Al Hameli House Deira",
+        "googleMaps": "https://www.google.com/maps/search/?api=1&query=Al+Hameli+House+Deira+Dubai",
+        "qr": "assets/qr/al-hameli-house-inn.png"
+      },
+      "meta": {
+        "hours": "TBC",
+        "phone": "TBC",
+        "website": "TBC"
+      },
+      "ar_status": "draft",
+      "source": "printed map label"
+    },
+    {
+      "id": "bin-dalmook-house",
+      "name": {
+        "en": "Bin Dalmook House",
+        "ar": "بيت بن دلموك"
+      },
+      "category": "heritage",
+      "icon": "house",
+      "tier": 3,
+      "featured": false,
+      "generic": false,
+      "x": 0.4797,
+      "y": 0.4344,
+      "description": {
+        "en": "",
+        "ar": ""
+      },
+      "image": "",
+      "navigation": {
+        "mapsQuery": "Bin Dalmook House Deira",
+        "googleMaps": "https://www.google.com/maps/search/?api=1&query=Bin+Dalmook+House+Deira+Dubai",
+        "qr": "assets/qr/bin-dalmook-house.png"
+      },
+      "meta": {
+        "hours": "TBC",
+        "phone": "TBC",
+        "website": "TBC"
+      },
+      "ar_status": "draft",
+      "source": "printed map label"
+    },
+    {
+      "id": "deira-grand-souq-south",
+      "name": {
+        "en": "Deira Grand Souq (Creek side)",
+        "ar": "سوق ديرة الكبير (جهة الخور)"
+      },
+      "category": "souks",
+      "icon": "souq",
+      "tier": 3,
+      "featured": false,
+      "generic": false,
+      "x": 0.5655,
+      "y": 0.4425,
+      "description": {
+        "en": "",
+        "ar": ""
+      },
+      "image": "",
+      "navigation": {
+        "mapsQuery": "Deira Grand Souq",
+        "googleMaps": "https://www.google.com/maps/search/?api=1&query=Deira+Grand+Souq+Dubai",
+        "qr": "assets/qr/deira-grand-souq-south.png"
+      },
+      "meta": {
+        "hours": "TBC",
+        "phone": "TBC",
+        "website": "TBC"
+      },
+      "ar_status": "draft",
+      "source": "printed map label"
+    },
+    {
+      "id": "herbs-souq",
+      "name": {
+        "en": "Herbs Souq",
+        "ar": "سوق الأعشاب"
+      },
+      "category": "souks",
+      "icon": "souq",
+      "tier": 3,
+      "featured": false,
+      "generic": false,
+      "x": 0.6563,
+      "y": 0.2957,
+      "description": {
+        "en": "",
+        "ar": ""
+      },
+      "image": "",
+      "navigation": {
+        "mapsQuery": "Deira Grand Souq",
+        "googleMaps": "https://www.google.com/maps/search/?api=1&query=Deira+Grand+Souq+Dubai",
+        "qr": "assets/qr/herbs-souq.png"
+      },
+      "meta": {
+        "hours": "TBC",
+        "phone": "TBC",
+        "website": "TBC"
+      },
+      "ar_status": "draft",
+      "source": "printed map label"
+    },
+    {
+      "id": "dubai-municipality-museum",
+      "name": {
+        "en": "Dubai Municipality Museum",
+        "ar": "متحف بلدية دبي"
+      },
+      "category": "heritage",
+      "icon": "museum",
+      "tier": 2,
+      "featured": false,
+      "generic": false,
+      "x": 0.7056,
+      "y": 0.3151,
+      "description": {
+        "en": "",
+        "ar": ""
+      },
+      "image": "",
+      "navigation": {
+        "mapsQuery": "Dubai Municipality Museum Deira",
+        "googleMaps": "https://www.google.com/maps/search/?api=1&query=Dubai+Municipality+Museum+Deira+Dubai",
+        "qr": "assets/qr/dubai-municipality-museum.png"
+      },
+      "meta": {
+        "hours": "TBC",
+        "phone": "TBC",
+        "website": "TBC"
+      },
+      "ar_status": "draft",
+      "source": "printed map label"
+    },
+    {
+      "id": "old-baladiya-street",
+      "name": {
+        "en": "Old Baladiya Street",
+        "ar": "شارع البلدية القديم"
+      },
+      "category": "landmarks",
+      "icon": "street",
+      "tier": 3,
+      "featured": false,
+      "generic": false,
+      "x": 0.6991,
+      "y": 0.3443,
+      "description": {
+        "en": "",
+        "ar": ""
+      },
+      "image": "",
+      "navigation": {
+        "mapsQuery": "Old Baladiya Street Deira",
+        "googleMaps": "https://www.google.com/maps/search/?api=1&query=Old+Baladiya+Street+Deira+Dubai",
+        "qr": "assets/qr/old-baladiya-street.png"
+      },
+      "meta": {
+        "hours": "TBC",
+        "phone": "TBC",
+        "website": "TBC"
+      },
+      "ar_status": "draft",
+      "source": "printed map label"
+    },
+    {
+      "id": "sabkha-square",
+      "name": {
+        "en": "Sabkha Square",
+        "ar": "ساحة السبخة"
+      },
+      "category": "landmarks",
+      "icon": "square",
+      "tier": 3,
+      "featured": false,
+      "generic": false,
+      "x": 0.822,
+      "y": 0.2153,
+      "description": {
+        "en": "",
+        "ar": ""
+      },
+      "image": "",
+      "navigation": {
+        "mapsQuery": "Sabkha Square Deira",
+        "googleMaps": "https://www.google.com/maps/search/?api=1&query=Sabkha+Square+Deira+Dubai",
+        "qr": "assets/qr/sabkha-square.png"
+      },
+      "meta": {
+        "hours": "TBC",
+        "phone": "TBC",
+        "website": "TBC"
+      },
+      "ar_status": "draft",
+      "source": "printed map label"
+    },
+    {
+      "id": "sheikh-hashar-tower",
+      "name": {
+        "en": "Sheikh Hashar Bin Rashed Tower",
+        "ar": "برج الشيخ هشر بن راشد"
+      },
+      "category": "heritage",
+      "icon": "tower",
+      "tier": 2,
+      "featured": false,
+      "generic": false,
+      "x": 0.8936,
+      "y": 0.3139,
+      "description": {
+        "en": "",
+        "ar": ""
+      },
+      "image": "",
+      "navigation": {
+        "mapsQuery": "Sheikh Hashar Bin Rashid Tower Deira",
+        "googleMaps": "https://www.google.com/maps/search/?api=1&query=Sheikh+Hashar+Bin+Rashid+Tower+Deira+Dubai",
+        "qr": "assets/qr/sheikh-hashar-tower.png"
+      },
+      "meta": {
+        "hours": "TBC",
+        "phone": "TBC",
+        "website": "TBC"
+      },
+      "ar_status": "draft",
+      "source": "printed map label"
+    },
+    {
+      "id": "al-ras-public-library",
+      "name": {
+        "en": "Al Ras Public Library",
+        "ar": "مكتبة الراس العامة"
+      },
+      "category": "heritage",
+      "icon": "library",
+      "tier": 2,
+      "featured": false,
+      "generic": false,
+      "x": 0.401,
+      "y": 0.5131,
+      "description": {
+        "en": "",
+        "ar": ""
+      },
+      "image": "",
+      "navigation": {
+        "mapsQuery": "Al Ras Public Library",
+        "googleMaps": "https://www.google.com/maps/search/?api=1&query=Al+Ras+Public+Library+Dubai",
+        "qr": "assets/qr/al-ras-public-library.png"
+      },
+      "meta": {
+        "hours": "TBC",
+        "phone": "TBC",
+        "website": "TBC"
+      },
+      "ar_status": "draft",
+      "source": "printed map label"
+    },
+    {
+      "id": "matar-bin-musabah-al-hay-house",
+      "name": {
+        "en": "Matar Bin Musabah Al Hay House",
+        "ar": "بيت مطر بن مصبح الحاي"
+      },
+      "category": "heritage",
+      "icon": "house",
+      "tier": 3,
+      "featured": false,
+      "generic": false,
+      "x": 0.4489,
+      "y": 0.4852,
+      "description": {
+        "en": "",
+        "ar": ""
+      },
+      "image": "",
+      "navigation": {
+        "mapsQuery": "Al Ras Deira heritage house",
+        "googleMaps": "https://www.google.com/maps/search/?api=1&query=Al+Ras+Deira+heritage+house+Dubai",
+        "qr": "assets/qr/matar-bin-musabah-al-hay-house.png"
+      },
+      "meta": {
+        "hours": "TBC",
+        "phone": "TBC",
+        "website": "TBC"
+      },
+      "ar_status": "draft",
+      "source": "printed map label"
+    },
+    {
+      "id": "bait-al-jeyran-restaurant",
+      "name": {
+        "en": "Bait Al Jeyran Restaurant",
+        "ar": "مطعم بيت الجيران"
+      },
+      "category": "food",
+      "icon": "restaurant",
+      "tier": 2,
+      "featured": false,
+      "generic": false,
+      "x": 0.2414,
+      "y": 0.5745,
+      "description": {
+        "en": "",
+        "ar": ""
+      },
+      "image": "",
+      "navigation": {
+        "mapsQuery": "Bait Al Jeyran Restaurant Al Shindagha",
+        "googleMaps": "https://www.google.com/maps/search/?api=1&query=Bait+Al+Jeyran+Restaurant+Al+Shindagha+Dubai",
+        "qr": "assets/qr/bait-al-jeyran-restaurant.png"
+      },
+      "meta": {
+        "hours": "TBC",
+        "phone": "TBC",
+        "website": "TBC"
+      },
+      "ar_status": "draft",
+      "source": "printed map label"
+    },
+    {
+      "id": "bayt-al-wakeel-restaurant",
+      "name": {
+        "en": "Bayt Al Wakeel Restaurant",
+        "ar": "مطعم بيت الوكيل"
+      },
+      "category": "food",
+      "icon": "restaurant",
+      "tier": 2,
+      "featured": false,
+      "generic": false,
+      "x": 0.5026,
+      "y": 0.6633,
+      "description": {
+        "en": "",
+        "ar": ""
+      },
+      "image": "",
+      "navigation": {
+        "mapsQuery": "Bayt Al Wakeel Restaurant Bur Dubai",
+        "googleMaps": "https://www.google.com/maps/search/?api=1&query=Bayt+Al+Wakeel+Restaurant+Bur+Dubai+Dubai",
+        "qr": "assets/qr/bayt-al-wakeel-restaurant.png"
+      },
+      "meta": {
+        "hours": "TBC",
+        "phone": "TBC",
+        "website": "TBC"
+      },
+      "ar_status": "draft",
+      "source": "printed map label"
+    },
+    {
+      "id": "hamad-khalfan-aldalil",
+      "name": {
+        "en": "Hamad Khalfan Aldalil",
+        "ar": "حمد خلفان الدليل"
+      },
+      "category": "food",
+      "icon": "restaurant",
+      "tier": 3,
+      "featured": false,
+      "generic": false,
+      "x": 0.477,
+      "y": 0.7521,
+      "description": {
+        "en": "",
+        "ar": ""
+      },
+      "image": "",
+      "navigation": {
+        "mapsQuery": "Hamad Khalfan Aldalil Bur Dubai",
+        "googleMaps": "https://www.google.com/maps/search/?api=1&query=Hamad+Khalfan+Aldalil+Bur+Dubai+Dubai",
+        "qr": "assets/qr/hamad-khalfan-aldalil.png"
+      },
+      "meta": {
+        "hours": "TBC",
+        "phone": "TBC",
+        "website": "TBC"
+      },
+      "ar_status": "draft",
+      "source": "printed map label"
+    },
+    {
+      "id": "al-ras-metro-station",
+      "name": {
+        "en": "Al Ras Metro Station (G23)",
+        "ar": "محطة مترو الراس"
+      },
+      "category": "creek",
+      "icon": "metro",
+      "tier": 1,
+      "featured": false,
+      "generic": false,
+      "x": 0.3323,
+      "y": 0.3638,
+      "description": {
+        "en": "",
+        "ar": ""
+      },
+      "image": "",
+      "navigation": {
+        "mapsQuery": "Al Ras Metro Station",
+        "googleMaps": "https://www.google.com/maps/search/?api=1&query=Al+Ras+Metro+Station+Dubai",
+        "qr": "assets/qr/al-ras-metro-station.png"
+      },
+      "meta": {
+        "hours": "TBC",
+        "phone": "TBC",
+        "website": "TBC"
+      },
+      "ar_status": "draft",
+      "source": "printed map label"
+    },
+    {
+      "id": "al-ghubaiba-metro-station",
+      "name": {
+        "en": "Al Ghubaiba Metro Station (G24)",
+        "ar": "محطة مترو الغبيبة"
+      },
+      "category": "creek",
+      "icon": "metro",
+      "tier": 1,
+      "featured": false,
+      "generic": false,
+      "x": 0.1302,
+      "y": 0.7657,
+      "description": {
+        "en": "",
+        "ar": ""
+      },
+      "image": "",
+      "navigation": {
+        "mapsQuery": "Al Ghubaiba Metro Station",
+        "googleMaps": "https://www.google.com/maps/search/?api=1&query=Al+Ghubaiba+Metro+Station+Dubai",
+        "qr": "assets/qr/al-ghubaiba-metro-station.png"
+      },
+      "meta": {
+        "hours": "TBC",
+        "phone": "TBC",
+        "website": "TBC"
+      },
+      "ar_status": "draft",
+      "source": "printed map label"
+    },
+    {
+      "id": "al-ghubaiba-bus-station",
+      "name": {
+        "en": "Al Ghubaiba Bus Station",
+        "ar": "محطة حافلات الغبيبة"
+      },
+      "category": "creek",
+      "icon": "busstation",
+      "tier": 2,
+      "featured": false,
+      "generic": false,
+      "x": 0.1992,
+      "y": 0.9437,
+      "description": {
+        "en": "",
+        "ar": ""
+      },
+      "image": "",
+      "navigation": {
+        "mapsQuery": "Al Ghubaiba Bus Station",
+        "googleMaps": "https://www.google.com/maps/search/?api=1&query=Al+Ghubaiba+Bus+Station+Dubai",
+        "qr": "assets/qr/al-ghubaiba-bus-station.png"
+      },
+      "meta": {
+        "hours": "TBC",
+        "phone": "TBC",
+        "website": "TBC"
+      },
+      "ar_status": "draft",
+      "source": "printed map label"
+    },
+    {
+      "id": "marine-al-shindagha",
+      "name": {
+        "en": "Al Shindagha Marine Transport Station",
+        "ar": "محطة الشندغة للنقل البحري"
+      },
+      "category": "creek",
+      "icon": "marine",
+      "tier": 2,
+      "featured": false,
+      "generic": false,
+      "x": 0.2682,
+      "y": 0.3646,
+      "description": {
+        "en": "",
+        "ar": ""
+      },
+      "image": "",
+      "navigation": {
+        "mapsQuery": "Al Shindagha Marine Transport Station",
+        "googleMaps": "https://www.google.com/maps/search/?api=1&query=Al+Shindagha+Marine+Transport+Station+Dubai",
+        "qr": "assets/qr/marine-al-shindagha.png"
+      },
+      "meta": {
+        "hours": "TBC",
+        "phone": "TBC",
+        "website": "TBC"
+      },
+      "ar_status": "draft",
+      "source": "printed map label"
+    },
+    {
+      "id": "marine-al-ghubaiba",
+      "name": {
+        "en": "Al Ghubaiba Marine Transport Station",
+        "ar": "محطة الغبيبة للنقل البحري"
+      },
+      "category": "creek",
+      "icon": "marine",
+      "tier": 2,
+      "featured": false,
+      "generic": false,
+      "x": 0.3172,
+      "y": 0.6003,
+      "description": {
+        "en": "",
+        "ar": ""
+      },
+      "image": "",
+      "navigation": {
+        "mapsQuery": "Al Ghubaiba Marine Transport Station",
+        "googleMaps": "https://www.google.com/maps/search/?api=1&query=Al+Ghubaiba+Marine+Transport+Station+Dubai",
+        "qr": "assets/qr/marine-al-ghubaiba.png"
+      },
+      "meta": {
+        "hours": "TBC",
+        "phone": "TBC",
+        "website": "TBC"
+      },
+      "ar_status": "draft",
+      "source": "printed map label"
+    },
+    {
+      "id": "marine-bur-dubai",
+      "name": {
+        "en": "Bur Dubai Abra Station",
+        "ar": "محطة عبرات بر دبي"
+      },
+      "category": "creek",
+      "icon": "marine",
+      "tier": 2,
+      "featured": false,
+      "generic": false,
+      "x": 0.3911,
+      "y": 0.6392,
+      "description": {
+        "en": "",
+        "ar": ""
+      },
+      "image": "",
+      "navigation": {
+        "mapsQuery": "Bur Dubai Abra Station",
+        "googleMaps": "https://www.google.com/maps/search/?api=1&query=Bur+Dubai+Abra+Station+Dubai",
+        "qr": "assets/qr/marine-bur-dubai.png"
+      },
+      "meta": {
+        "hours": "TBC",
+        "phone": "TBC",
+        "website": "TBC"
+      },
+      "ar_status": "draft",
+      "source": "printed map label"
+    },
+    {
+      "id": "marine-dubai-old-souq",
+      "name": {
+        "en": "Dubai Old Souq Abra Station",
+        "ar": "محطة عبرات سوق دبي القديم"
+      },
+      "category": "creek",
+      "icon": "marine",
+      "tier": 2,
+      "featured": false,
+      "generic": false,
+      "x": 0.4695,
+      "y": 0.6722,
+      "description": {
+        "en": "",
+        "ar": ""
+      },
+      "image": "",
+      "navigation": {
+        "mapsQuery": "Dubai Old Souk Abra Station",
+        "googleMaps": "https://www.google.com/maps/search/?api=1&query=Dubai+Old+Souk+Abra+Station+Dubai",
+        "qr": "assets/qr/marine-dubai-old-souq.png"
+      },
+      "meta": {
+        "hours": "TBC",
+        "phone": "TBC",
+        "website": "TBC"
+      },
+      "ar_status": "draft",
+      "source": "printed map label"
+    },
+    {
+      "id": "marine-deira-old-souk",
+      "name": {
+        "en": "Deira Old Souk Abra Station",
+        "ar": "محطة عبرات سوق ديرة القديم"
+      },
+      "category": "creek",
+      "icon": "marine",
+      "tier": 2,
+      "featured": false,
+      "generic": false,
+      "x": 0.6808,
+      "y": 0.4213,
+      "description": {
+        "en": "",
+        "ar": ""
+      },
+      "image": "",
+      "navigation": {
+        "mapsQuery": "Deira Old Souk Abra Station",
+        "googleMaps": "https://www.google.com/maps/search/?api=1&query=Deira+Old+Souk+Abra+Station+Dubai",
+        "qr": "assets/qr/marine-deira-old-souk.png"
+      },
+      "meta": {
+        "hours": "TBC",
+        "phone": "TBC",
+        "website": "TBC"
+      },
+      "ar_status": "draft",
+      "source": "printed map label"
+    },
+    {
+      "id": "marine-al-fahidi",
+      "name": {
+        "en": "Al Fahidi Marine Transport Station",
+        "ar": "محطة الفهيدي للنقل البحري"
+      },
+      "category": "creek",
+      "icon": "marine",
+      "tier": 2,
+      "featured": false,
+      "generic": false,
+      "x": 0.7216,
+      "y": 0.5292,
+      "description": {
+        "en": "",
+        "ar": ""
+      },
+      "image": "",
+      "navigation": {
+        "mapsQuery": "Al Fahidi Marine Transport Station",
+        "googleMaps": "https://www.google.com/maps/search/?api=1&query=Al+Fahidi+Marine+Transport+Station+Dubai",
+        "qr": "assets/qr/marine-al-fahidi.png"
+      },
+      "meta": {
+        "hours": "TBC",
+        "phone": "TBC",
+        "website": "TBC"
+      },
+      "ar_status": "draft",
+      "source": "printed map label"
+    },
+    {
+      "id": "marine-al-sabkha",
+      "name": {
+        "en": "Al Sabkha Marine Transport Station",
+        "ar": "محطة السبخة للنقل البحري"
+      },
+      "category": "creek",
+      "icon": "marine",
+      "tier": 2,
+      "featured": false,
+      "generic": false,
+      "x": 0.8781,
+      "y": 0.3477,
+      "description": {
+        "en": "",
+        "ar": ""
+      },
+      "image": "",
+      "navigation": {
+        "mapsQuery": "Al Sabkha Abra Station",
+        "googleMaps": "https://www.google.com/maps/search/?api=1&query=Al+Sabkha+Abra+Station+Dubai",
+        "qr": "assets/qr/marine-al-sabkha.png"
+      },
+      "meta": {
+        "hours": "TBC",
+        "phone": "TBC",
+        "website": "TBC"
+      },
+      "ar_status": "draft",
+      "source": "printed map label"
+    },
+    {
+      "id": "marine-al-seef",
+      "name": {
+        "en": "Al Seef Marine Transport Station",
+        "ar": "محطة السيف للنقل البحري"
+      },
+      "category": "creek",
+      "icon": "marine",
+      "tier": 2,
+      "featured": false,
+      "generic": false,
+      "x": 0.9332,
+      "y": 0.533,
+      "description": {
+        "en": "",
+        "ar": ""
+      },
+      "image": "",
+      "navigation": {
+        "mapsQuery": "Al Seef Marine Transport Station",
+        "googleMaps": "https://www.google.com/maps/search/?api=1&query=Al+Seef+Marine+Transport+Station+Dubai",
+        "qr": "assets/qr/marine-al-seef.png"
+      },
+      "meta": {
+        "hours": "TBC",
+        "phone": "TBC",
+        "website": "TBC"
+      },
+      "ar_status": "draft",
+      "source": "printed map label"
+    },
+    {
+      "id": "dubai-ferry",
+      "name": {
+        "en": "Dubai Ferry",
+        "ar": "عبّارة دبي"
+      },
+      "category": "creek",
+      "icon": "ferry",
+      "tier": 2,
+      "featured": false,
+      "generic": false,
+      "x": 0.3352,
+      "y": 0.2284,
+      "description": {
+        "en": "",
+        "ar": ""
+      },
+      "image": "",
+      "navigation": {
+        "mapsQuery": "Dubai Ferry Al Ghubaiba",
+        "googleMaps": "https://www.google.com/maps/search/?api=1&query=Dubai+Ferry+Al+Ghubaiba+Dubai",
+        "qr": "assets/qr/dubai-ferry.png"
+      },
+      "meta": {
+        "hours": "TBC",
+        "phone": "TBC",
+        "website": "TBC"
+      },
+      "ar_status": "draft",
+      "source": "printed map label"
+    },
+    {
+      "id": "dubai-water-taxi",
+      "name": {
+        "en": "Dubai Water Taxi",
+        "ar": "تاكسي دبي المائي"
+      },
+      "category": "creek",
+      "icon": "watertaxi",
+      "tier": 2,
+      "featured": false,
+      "generic": false,
+      "x": 0.3175,
+      "y": 0.519,
+      "description": {
+        "en": "",
+        "ar": ""
+      },
+      "image": "",
+      "navigation": {
+        "mapsQuery": "Dubai Water Taxi Al Ghubaiba",
+        "googleMaps": "https://www.google.com/maps/search/?api=1&query=Dubai+Water+Taxi+Al+Ghubaiba+Dubai",
+        "qr": "assets/qr/dubai-water-taxi.png"
+      },
+      "meta": {
+        "hours": "TBC",
+        "phone": "TBC",
+        "website": "TBC"
+      },
+      "ar_status": "draft",
+      "source": "printed map label"
+    },
+    {
+      "id": "traditional-abra",
+      "name": {
+        "en": "Traditional Abra",
+        "ar": "العبرة التقليدية"
+      },
+      "category": "creek",
+      "icon": "abra",
+      "tier": 2,
+      "featured": false,
+      "generic": false,
+      "x": 0.4401,
+      "y": 0.588,
+      "description": {
+        "en": "",
+        "ar": ""
+      },
+      "image": "",
+      "navigation": {
+        "mapsQuery": "Bur Dubai Abra Station",
+        "googleMaps": "https://www.google.com/maps/search/?api=1&query=Bur+Dubai+Abra+Station+Dubai",
+        "qr": "assets/qr/traditional-abra.png"
+      },
+      "meta": {
+        "hours": "TBC",
+        "phone": "TBC",
+        "website": "TBC"
+      },
+      "ar_status": "draft",
+      "source": "printed map label"
+    },
+    {
+      "id": "dhow-cruise",
+      "name": {
+        "en": "Dhow Cruise",
+        "ar": "رحلة الداو"
+      },
+      "category": "creek",
+      "icon": "dhow",
+      "tier": 2,
+      "featured": false,
+      "generic": false,
+      "x": 0.8684,
+      "y": 0.3997,
+      "description": {
+        "en": "",
+        "ar": ""
+      },
+      "image": "",
+      "navigation": {
+        "mapsQuery": "Dubai Creek Dhow Cruise Deira",
+        "googleMaps": "https://www.google.com/maps/search/?api=1&query=Dubai+Creek+Dhow+Cruise+Deira+Dubai",
+        "qr": "assets/qr/dhow-cruise.png"
+      },
+      "meta": {
+        "hours": "TBC",
+        "phone": "TBC",
+        "website": "TBC"
+      },
+      "ar_status": "draft",
+      "source": "printed map label"
+    },
+    {
+      "id": "parking-1",
+      "name": {
+        "en": "Parking",
+        "ar": "مواقف السيارات"
+      },
+      "category": "services",
+      "icon": "parking",
+      "tier": 3,
+      "featured": false,
+      "generic": true,
+      "x": 0.272,
+      "y": 0.2166,
+      "description": {
+        "en": "",
+        "ar": ""
+      },
+      "image": "",
+      "navigation": {
+        "mapsQuery": "",
+        "googleMaps": "",
+        "qr": ""
+      },
+      "meta": {
+        "hours": "TBC",
+        "phone": "TBC",
+        "website": "TBC"
+      },
+      "ar_status": "draft",
+      "source": "printed map label"
+    },
+    {
+      "id": "parking-2",
+      "name": {
+        "en": "Parking",
+        "ar": "مواقف السيارات"
+      },
+      "category": "services",
+      "icon": "parking",
+      "tier": 3,
+      "featured": false,
+      "generic": true,
+      "x": 0.0527,
+      "y": 0.3989,
+      "description": {
+        "en": "",
+        "ar": ""
+      },
+      "image": "",
+      "navigation": {
+        "mapsQuery": "",
+        "googleMaps": "",
+        "qr": ""
+      },
+      "meta": {
+        "hours": "TBC",
+        "phone": "TBC",
+        "website": "TBC"
+      },
+      "ar_status": "draft",
+      "source": "printed map label"
+    },
+    {
+      "id": "parking-3",
+      "name": {
+        "en": "Parking",
+        "ar": "مواقف السيارات"
+      },
+      "category": "services",
+      "icon": "parking",
+      "tier": 3,
+      "featured": false,
+      "generic": true,
+      "x": 0.0313,
+      "y": 0.6108,
+      "description": {
+        "en": "",
+        "ar": ""
+      },
+      "image": "",
+      "navigation": {
+        "mapsQuery": "",
+        "googleMaps": "",
+        "qr": ""
+      },
+      "meta": {
+        "hours": "TBC",
+        "phone": "TBC",
+        "website": "TBC"
+      },
+      "ar_status": "draft",
+      "source": "printed map label"
+    },
+    {
+      "id": "parking-4",
+      "name": {
+        "en": "Parking",
+        "ar": "مواقف السيارات"
+      },
+      "category": "services",
+      "icon": "parking",
+      "tier": 3,
+      "featured": false,
+      "generic": true,
+      "x": 0.332,
+      "y": 0.4446,
+      "description": {
+        "en": "",
+        "ar": ""
+      },
+      "image": "",
+      "navigation": {
+        "mapsQuery": "",
+        "googleMaps": "",
+        "qr": ""
+      },
+      "meta": {
+        "hours": "TBC",
+        "phone": "TBC",
+        "website": "TBC"
+      },
+      "ar_status": "draft",
+      "source": "printed map label"
+    },
+    {
+      "id": "parking-5",
+      "name": {
+        "en": "Parking",
+        "ar": "مواقف السيارات"
+      },
+      "category": "services",
+      "icon": "parking",
+      "tier": 3,
+      "featured": false,
+      "generic": true,
+      "x": 0.3505,
+      "y": 0.4446,
+      "description": {
+        "en": "",
+        "ar": ""
+      },
+      "image": "",
+      "navigation": {
+        "mapsQuery": "",
+        "googleMaps": "",
+        "qr": ""
+      },
+      "meta": {
+        "hours": "TBC",
+        "phone": "TBC",
+        "website": "TBC"
+      },
+      "ar_status": "draft",
+      "source": "printed map label"
+    },
+    {
+      "id": "parking-6",
+      "name": {
+        "en": "Parking",
+        "ar": "مواقف السيارات"
+      },
+      "category": "services",
+      "icon": "parking",
+      "tier": 3,
+      "featured": false,
+      "generic": true,
+      "x": 0.3707,
+      "y": 0.4298,
+      "description": {
+        "en": "",
+        "ar": ""
+      },
+      "image": "",
+      "navigation": {
+        "mapsQuery": "",
+        "googleMaps": "",
+        "qr": ""
+      },
+      "meta": {
+        "hours": "TBC",
+        "phone": "TBC",
+        "website": "TBC"
+      },
+      "ar_status": "draft",
+      "source": "printed map label"
+    },
+    {
+      "id": "parking-7",
+      "name": {
+        "en": "Parking",
+        "ar": "مواقف السيارات"
+      },
+      "category": "services",
+      "icon": "parking",
+      "tier": 3,
+      "featured": false,
+      "generic": true,
+      "x": 0.6386,
+      "y": 0.3909,
+      "description": {
+        "en": "",
+        "ar": ""
+      },
+      "image": "",
+      "navigation": {
+        "mapsQuery": "",
+        "googleMaps": "",
+        "qr": ""
+      },
+      "meta": {
+        "hours": "TBC",
+        "phone": "TBC",
+        "website": "TBC"
+      },
+      "ar_status": "draft",
+      "source": "printed map label"
+    },
+    {
+      "id": "parking-8",
+      "name": {
+        "en": "Parking",
+        "ar": "مواقف السيارات"
+      },
+      "category": "services",
+      "icon": "parking",
+      "tier": 3,
+      "featured": false,
+      "generic": true,
+      "x": 0.734,
+      "y": 0.3558,
+      "description": {
+        "en": "",
+        "ar": ""
+      },
+      "image": "",
+      "navigation": {
+        "mapsQuery": "",
+        "googleMaps": "",
+        "qr": ""
+      },
+      "meta": {
+        "hours": "TBC",
+        "phone": "TBC",
+        "website": "TBC"
+      },
+      "ar_status": "draft",
+      "source": "printed map label"
+    },
+    {
+      "id": "parking-9",
+      "name": {
+        "en": "Parking",
+        "ar": "مواقف السيارات"
+      },
+      "category": "services",
+      "icon": "parking",
+      "tier": 3,
+      "featured": false,
+      "generic": true,
+      "x": 0.1302,
+      "y": 0.7331,
+      "description": {
+        "en": "",
+        "ar": ""
+      },
+      "image": "",
+      "navigation": {
+        "mapsQuery": "",
+        "googleMaps": "",
+        "qr": ""
+      },
+      "meta": {
+        "hours": "TBC",
+        "phone": "TBC",
+        "website": "TBC"
+      },
+      "ar_status": "draft",
+      "source": "printed map label"
+    },
+    {
+      "id": "parking-10",
+      "name": {
+        "en": "Parking",
+        "ar": "مواقف السيارات"
+      },
+      "category": "services",
+      "icon": "parking",
+      "tier": 3,
+      "featured": false,
+      "generic": true,
+      "x": 0.3624,
+      "y": 0.8295,
+      "description": {
+        "en": "",
+        "ar": ""
+      },
+      "image": "",
+      "navigation": {
+        "mapsQuery": "",
+        "googleMaps": "",
+        "qr": ""
+      },
+      "meta": {
+        "hours": "TBC",
+        "phone": "TBC",
+        "website": "TBC"
+      },
+      "ar_status": "draft",
+      "source": "printed map label"
+    },
+    {
+      "id": "parking-11",
+      "name": {
+        "en": "Parking",
+        "ar": "مواقف السيارات"
+      },
+      "category": "services",
+      "icon": "parking",
+      "tier": 3,
+      "featured": false,
+      "generic": true,
+      "x": 0.6012,
+      "y": 0.791,
+      "description": {
+        "en": "",
+        "ar": ""
+      },
+      "image": "",
+      "navigation": {
+        "mapsQuery": "",
+        "googleMaps": "",
+        "qr": ""
+      },
+      "meta": {
+        "hours": "TBC",
+        "phone": "TBC",
+        "website": "TBC"
+      },
+      "ar_status": "draft",
+      "source": "printed map label"
+    },
+    {
+      "id": "parking-12",
+      "name": {
+        "en": "Parking",
+        "ar": "مواقف السيارات"
+      },
+      "category": "services",
+      "icon": "parking",
+      "tier": 3,
+      "featured": false,
+      "generic": true,
+      "x": 0.4736,
+      "y": 0.8198,
+      "description": {
+        "en": "",
+        "ar": ""
+      },
+      "image": "",
+      "navigation": {
+        "mapsQuery": "",
+        "googleMaps": "",
+        "qr": ""
+      },
+      "meta": {
+        "hours": "TBC",
+        "phone": "TBC",
+        "website": "TBC"
+      },
+      "ar_status": "draft",
+      "source": "printed map label"
+    },
+    {
+      "id": "parking-13",
+      "name": {
+        "en": "Parking",
+        "ar": "مواقف السيارات"
+      },
+      "category": "services",
+      "icon": "parking",
+      "tier": 3,
+      "featured": false,
+      "generic": true,
+      "x": 0.8118,
+      "y": 0.6794,
+      "description": {
+        "en": "",
+        "ar": ""
+      },
+      "image": "",
+      "navigation": {
+        "mapsQuery": "",
+        "googleMaps": "",
+        "qr": ""
+      },
+      "meta": {
+        "hours": "TBC",
+        "phone": "TBC",
+        "website": "TBC"
+      },
+      "ar_status": "draft",
+      "source": "printed map label"
+    },
+    {
+      "id": "parking-14",
+      "name": {
+        "en": "Parking",
+        "ar": "مواقف السيارات"
+      },
+      "category": "services",
+      "icon": "parking",
+      "tier": 3,
+      "featured": false,
+      "generic": true,
+      "x": 0.8314,
+      "y": 0.6624,
+      "description": {
+        "en": "",
+        "ar": ""
+      },
+      "image": "",
+      "navigation": {
+        "mapsQuery": "",
+        "googleMaps": "",
+        "qr": ""
+      },
+      "meta": {
+        "hours": "TBC",
+        "phone": "TBC",
+        "website": "TBC"
+      },
+      "ar_status": "draft",
+      "source": "printed map label"
+    },
+    {
+      "id": "parking-15",
+      "name": {
+        "en": "Parking",
+        "ar": "مواقف السيارات"
+      },
+      "category": "services",
+      "icon": "parking",
+      "tier": 3,
+      "featured": false,
+      "generic": true,
+      "x": 0.8076,
+      "y": 0.8008,
+      "description": {
+        "en": "",
+        "ar": ""
+      },
+      "image": "",
+      "navigation": {
+        "mapsQuery": "",
+        "googleMaps": "",
+        "qr": ""
+      },
+      "meta": {
+        "hours": "TBC",
+        "phone": "TBC",
+        "website": "TBC"
+      },
+      "ar_status": "draft",
+      "source": "printed map label"
+    },
+    {
+      "id": "parking-16",
+      "name": {
+        "en": "Parking",
+        "ar": "مواقف السيارات"
+      },
+      "category": "services",
+      "icon": "parking",
+      "tier": 3,
+      "featured": false,
+      "generic": true,
+      "x": 0.8839,
+      "y": 0.6701,
+      "description": {
+        "en": "",
+        "ar": ""
+      },
+      "image": "",
+      "navigation": {
+        "mapsQuery": "",
+        "googleMaps": "",
+        "qr": ""
+      },
+      "meta": {
+        "hours": "TBC",
+        "phone": "TBC",
+        "website": "TBC"
+      },
+      "ar_status": "draft",
+      "source": "printed map label"
+    },
+    {
+      "id": "parking-17",
+      "name": {
+        "en": "Parking",
+        "ar": "مواقف السيارات"
+      },
+      "category": "services",
+      "icon": "parking",
+      "tier": 3,
+      "featured": false,
+      "generic": true,
+      "x": 0.2006,
+      "y": 0.8832,
+      "description": {
+        "en": "",
+        "ar": ""
+      },
+      "image": "",
+      "navigation": {
+        "mapsQuery": "",
+        "googleMaps": "",
+        "qr": ""
+      },
+      "meta": {
+        "hours": "TBC",
+        "phone": "TBC",
+        "website": "TBC"
+      },
+      "ar_status": "draft",
+      "source": "printed map label"
+    },
+    {
+      "id": "parking-18",
+      "name": {
+        "en": "Parking",
+        "ar": "مواقف السيارات"
+      },
+      "category": "services",
+      "icon": "parking",
+      "tier": 3,
+      "featured": false,
+      "generic": true,
+      "x": 0.5919,
+      "y": 0.9031,
+      "description": {
+        "en": "",
+        "ar": ""
+      },
+      "image": "",
+      "navigation": {
+        "mapsQuery": "",
+        "googleMaps": "",
+        "qr": ""
+      },
+      "meta": {
+        "hours": "TBC",
+        "phone": "TBC",
+        "website": "TBC"
+      },
+      "ar_status": "draft",
+      "source": "printed map label"
+    },
+    {
+      "id": "restrooms-1",
+      "name": {
+        "en": "Restrooms",
+        "ar": "دورات المياه"
+      },
+      "category": "services",
+      "icon": "restroom",
+      "tier": 3,
+      "featured": false,
+      "generic": true,
+      "x": 0.5307,
+      "y": 0.2179,
+      "description": {
+        "en": "",
+        "ar": ""
+      },
+      "image": "",
+      "navigation": {
+        "mapsQuery": "",
+        "googleMaps": "",
+        "qr": ""
+      },
+      "meta": {
+        "hours": "TBC",
+        "phone": "TBC",
+        "website": "TBC"
+      },
+      "ar_status": "draft",
+      "source": "printed map label"
+    },
+    {
+      "id": "restrooms-2",
+      "name": {
+        "en": "Restrooms",
+        "ar": "دورات المياه"
+      },
+      "category": "services",
+      "icon": "restroom",
+      "tier": 3,
+      "featured": false,
+      "generic": true,
+      "x": 0.6697,
+      "y": 0.1887,
+      "description": {
+        "en": "",
+        "ar": ""
+      },
+      "image": "",
+      "navigation": {
+        "mapsQuery": "",
+        "googleMaps": "",
+        "qr": ""
+      },
+      "meta": {
+        "hours": "TBC",
+        "phone": "TBC",
+        "website": "TBC"
+      },
+      "ar_status": "draft",
+      "source": "printed map label"
+    },
+    {
+      "id": "restrooms-3",
+      "name": {
+        "en": "Restrooms",
+        "ar": "دورات المياه"
+      },
+      "category": "services",
+      "icon": "restroom",
+      "tier": 3,
+      "featured": false,
+      "generic": true,
+      "x": 0.0891,
+      "y": 0.4285,
+      "description": {
+        "en": "",
+        "ar": ""
+      },
+      "image": "",
+      "navigation": {
+        "mapsQuery": "",
+        "googleMaps": "",
+        "qr": ""
+      },
+      "meta": {
+        "hours": "TBC",
+        "phone": "TBC",
+        "website": "TBC"
+      },
+      "ar_status": "draft",
+      "source": "printed map label"
+    },
+    {
+      "id": "restrooms-4",
+      "name": {
+        "en": "Restrooms",
+        "ar": "دورات المياه"
+      },
+      "category": "services",
+      "icon": "restroom",
+      "tier": 3,
+      "featured": false,
+      "generic": true,
+      "x": 0.0874,
+      "y": 0.6007,
+      "description": {
+        "en": "",
+        "ar": ""
+      },
+      "image": "",
+      "navigation": {
+        "mapsQuery": "",
+        "googleMaps": "",
+        "qr": ""
+      },
+      "meta": {
+        "hours": "TBC",
+        "phone": "TBC",
+        "website": "TBC"
+      },
+      "ar_status": "draft",
+      "source": "printed map label"
+    },
+    {
+      "id": "restrooms-5",
+      "name": {
+        "en": "Restrooms",
+        "ar": "دورات المياه"
+      },
+      "category": "services",
+      "icon": "restroom",
+      "tier": 3,
+      "featured": false,
+      "generic": true,
+      "x": 0.3573,
+      "y": 0.4746,
+      "description": {
+        "en": "",
+        "ar": ""
+      },
+      "image": "",
+      "navigation": {
+        "mapsQuery": "",
+        "googleMaps": "",
+        "qr": ""
+      },
+      "meta": {
+        "hours": "TBC",
+        "phone": "TBC",
+        "website": "TBC"
+      },
+      "ar_status": "draft",
+      "source": "printed map label"
+    },
+    {
+      "id": "restrooms-6",
+      "name": {
+        "en": "Restrooms",
+        "ar": "دورات المياه"
+      },
+      "category": "services",
+      "icon": "restroom",
+      "tier": 3,
+      "featured": false,
+      "generic": true,
+      "x": 0.5832,
+      "y": 0.4365,
+      "description": {
+        "en": "",
+        "ar": ""
+      },
+      "image": "",
+      "navigation": {
+        "mapsQuery": "",
+        "googleMaps": "",
+        "qr": ""
+      },
+      "meta": {
+        "hours": "TBC",
+        "phone": "TBC",
+        "website": "TBC"
+      },
+      "ar_status": "draft",
+      "source": "printed map label"
+    },
+    {
+      "id": "restrooms-7",
+      "name": {
+        "en": "Restrooms",
+        "ar": "دورات المياه"
+      },
+      "category": "services",
+      "icon": "restroom",
+      "tier": 3,
+      "featured": false,
+      "generic": true,
+      "x": 0.648,
+      "y": 0.3672,
+      "description": {
+        "en": "",
+        "ar": ""
+      },
+      "image": "",
+      "navigation": {
+        "mapsQuery": "",
+        "googleMaps": "",
+        "qr": ""
+      },
+      "meta": {
+        "hours": "TBC",
+        "phone": "TBC",
+        "website": "TBC"
+      },
+      "ar_status": "draft",
+      "source": "printed map label"
+    },
+    {
+      "id": "restrooms-8",
+      "name": {
+        "en": "Restrooms",
+        "ar": "دورات المياه"
+      },
+      "category": "services",
+      "icon": "restroom",
+      "tier": 3,
+      "featured": false,
+      "generic": true,
+      "x": 0.4819,
+      "y": 0.4975,
+      "description": {
+        "en": "",
+        "ar": ""
+      },
+      "image": "",
+      "navigation": {
+        "mapsQuery": "",
+        "googleMaps": "",
+        "qr": ""
+      },
+      "meta": {
+        "hours": "TBC",
+        "phone": "TBC",
+        "website": "TBC"
+      },
+      "ar_status": "draft",
+      "source": "printed map label"
+    },
+    {
+      "id": "restrooms-9",
+      "name": {
+        "en": "Restrooms",
+        "ar": "دورات المياه"
+      },
+      "category": "services",
+      "icon": "restroom",
+      "tier": 3,
+      "featured": false,
+      "generic": true,
+      "x": 0.7967,
+      "y": 0.6882,
+      "description": {
+        "en": "",
+        "ar": ""
+      },
+      "image": "",
+      "navigation": {
+        "mapsQuery": "",
+        "googleMaps": "",
+        "qr": ""
+      },
+      "meta": {
+        "hours": "TBC",
+        "phone": "TBC",
+        "website": "TBC"
+      },
+      "ar_status": "draft",
+      "source": "printed map label"
+    },
+    {
+      "id": "rest-area-1",
+      "name": {
+        "en": "Rest Area",
+        "ar": "استراحة"
+      },
+      "category": "services",
+      "icon": "restarea",
+      "tier": 3,
+      "featured": false,
+      "generic": true,
+      "x": 0.2342,
+      "y": 0.2948,
+      "description": {
+        "en": "",
+        "ar": ""
+      },
+      "image": "",
+      "navigation": {
+        "mapsQuery": "",
+        "googleMaps": "",
+        "qr": ""
+      },
+      "meta": {
+        "hours": "TBC",
+        "phone": "TBC",
+        "website": "TBC"
+      },
+      "ar_status": "draft",
+      "source": "printed map label"
+    },
+    {
+      "id": "rest-area-2",
+      "name": {
+        "en": "Rest Area",
+        "ar": "استراحة"
+      },
+      "category": "services",
+      "icon": "restarea",
+      "tier": 3,
+      "featured": false,
+      "generic": true,
+      "x": 0.2269,
+      "y": 0.3629,
+      "description": {
+        "en": "",
+        "ar": ""
+      },
+      "image": "",
+      "navigation": {
+        "mapsQuery": "",
+        "googleMaps": "",
+        "qr": ""
+      },
+      "meta": {
+        "hours": "TBC",
+        "phone": "TBC",
+        "website": "TBC"
+      },
+      "ar_status": "draft",
+      "source": "printed map label"
+    },
+    {
+      "id": "rest-area-3",
+      "name": {
+        "en": "Rest Area",
+        "ar": "استراحة"
+      },
+      "category": "services",
+      "icon": "restarea",
+      "tier": 3,
+      "featured": false,
+      "generic": true,
+      "x": 0.0806,
+      "y": 0.6294,
+      "description": {
+        "en": "",
+        "ar": ""
+      },
+      "image": "",
+      "navigation": {
+        "mapsQuery": "",
+        "googleMaps": "",
+        "qr": ""
+      },
+      "meta": {
+        "hours": "TBC",
+        "phone": "TBC",
+        "website": "TBC"
+      },
+      "ar_status": "draft",
+      "source": "printed map label"
+    },
+    {
+      "id": "rest-area-4",
+      "name": {
+        "en": "Rest Area",
+        "ar": "استراحة"
+      },
+      "category": "services",
+      "icon": "restarea",
+      "tier": 3,
+      "featured": false,
+      "generic": true,
+      "x": 0.153,
+      "y": 0.7035,
+      "description": {
+        "en": "",
+        "ar": ""
+      },
+      "image": "",
+      "navigation": {
+        "mapsQuery": "",
+        "googleMaps": "",
+        "qr": ""
+      },
+      "meta": {
+        "hours": "TBC",
+        "phone": "TBC",
+        "website": "TBC"
+      },
+      "ar_status": "draft",
+      "source": "printed map label"
+    },
+    {
+      "id": "rest-area-5",
+      "name": {
+        "en": "Rest Area",
+        "ar": "استراحة"
+      },
+      "category": "services",
+      "icon": "restarea",
+      "tier": 3,
+      "featured": false,
+      "generic": true,
+      "x": 0.2699,
+      "y": 0.6379,
+      "description": {
+        "en": "",
+        "ar": ""
+      },
+      "image": "",
+      "navigation": {
+        "mapsQuery": "",
+        "googleMaps": "",
+        "qr": ""
+      },
+      "meta": {
+        "hours": "TBC",
+        "phone": "TBC",
+        "website": "TBC"
+      },
+      "ar_status": "draft",
+      "source": "printed map label"
+    },
+    {
+      "id": "rest-area-6",
+      "name": {
+        "en": "Rest Area",
+        "ar": "استراحة"
+      },
+      "category": "services",
+      "icon": "restarea",
+      "tier": 3,
+      "featured": false,
+      "generic": true,
+      "x": 0.7731,
+      "y": 0.6193,
+      "description": {
+        "en": "",
+        "ar": ""
+      },
+      "image": "",
+      "navigation": {
+        "mapsQuery": "",
+        "googleMaps": "",
+        "qr": ""
+      },
+      "meta": {
+        "hours": "TBC",
+        "phone": "TBC",
+        "website": "TBC"
+      },
+      "ar_status": "draft",
+      "source": "printed map label"
+    },
+    {
+      "id": "bus-stop-1",
+      "name": {
+        "en": "Bus Stop",
+        "ar": "موقف حافلات"
+      },
+      "category": "creek",
+      "icon": "bus",
+      "tier": 3,
+      "featured": false,
+      "generic": true,
+      "x": 0.3573,
+      "y": 0.4069,
+      "description": {
+        "en": "",
+        "ar": ""
+      },
+      "image": "",
+      "navigation": {
+        "mapsQuery": "",
+        "googleMaps": "",
+        "qr": ""
+      },
+      "meta": {
+        "hours": "TBC",
+        "phone": "TBC",
+        "website": "TBC"
+      },
+      "ar_status": "draft",
+      "source": "printed map label"
+    },
+    {
+      "id": "bus-stop-2",
+      "name": {
+        "en": "Bus Stop",
+        "ar": "موقف حافلات"
+      },
+      "category": "creek",
+      "icon": "bus",
+      "tier": 3,
+      "featured": false,
+      "generic": true,
+      "x": 0.3852,
+      "y": 0.3866,
+      "description": {
+        "en": "",
+        "ar": ""
+      },
+      "image": "",
+      "navigation": {
+        "mapsQuery": "",
+        "googleMaps": "",
+        "qr": ""
+      },
+      "meta": {
+        "hours": "TBC",
+        "phone": "TBC",
+        "website": "TBC"
+      },
+      "ar_status": "draft",
+      "source": "printed map label"
+    },
+    {
+      "id": "bus-stop-3",
+      "name": {
+        "en": "Bus Stop",
+        "ar": "موقف حافلات"
+      },
+      "category": "creek",
+      "icon": "bus",
+      "tier": 3,
+      "featured": false,
+      "generic": true,
+      "x": 0.3816,
+      "y": 0.5114,
+      "description": {
+        "en": "",
+        "ar": ""
+      },
+      "image": "",
+      "navigation": {
+        "mapsQuery": "",
+        "googleMaps": "",
+        "qr": ""
+      },
+      "meta": {
+        "hours": "TBC",
+        "phone": "TBC",
+        "website": "TBC"
+      },
+      "ar_status": "draft",
+      "source": "printed map label"
+    },
+    {
+      "id": "bus-stop-4",
+      "name": {
+        "en": "Bus Stop",
+        "ar": "موقف حافلات"
+      },
+      "category": "creek",
+      "icon": "bus",
+      "tier": 3,
+      "featured": false,
+      "generic": true,
+      "x": 0.6497,
+      "y": 0.4044,
+      "description": {
+        "en": "",
+        "ar": ""
+      },
+      "image": "",
+      "navigation": {
+        "mapsQuery": "",
+        "googleMaps": "",
+        "qr": ""
+      },
+      "meta": {
+        "hours": "TBC",
+        "phone": "TBC",
+        "website": "TBC"
+      },
+      "ar_status": "draft",
+      "source": "printed map label"
+    },
+    {
+      "id": "bus-stop-5",
+      "name": {
+        "en": "Bus Stop",
+        "ar": "موقف حافلات"
+      },
+      "category": "creek",
+      "icon": "bus",
+      "tier": 3,
+      "featured": false,
+      "generic": true,
+      "x": 0.7926,
+      "y": 0.3414,
+      "description": {
+        "en": "",
+        "ar": ""
+      },
+      "image": "",
+      "navigation": {
+        "mapsQuery": "",
+        "googleMaps": "",
+        "qr": ""
+      },
+      "meta": {
+        "hours": "TBC",
+        "phone": "TBC",
+        "website": "TBC"
+      },
+      "ar_status": "draft",
+      "source": "printed map label"
+    },
+    {
+      "id": "bus-stop-6",
+      "name": {
+        "en": "Bus Stop",
+        "ar": "موقف حافلات"
+      },
+      "category": "creek",
+      "icon": "bus",
+      "tier": 3,
+      "featured": false,
+      "generic": true,
+      "x": 0.8122,
+      "y": 0.3519,
+      "description": {
+        "en": "",
+        "ar": ""
+      },
+      "image": "",
+      "navigation": {
+        "mapsQuery": "",
+        "googleMaps": "",
+        "qr": ""
+      },
+      "meta": {
+        "hours": "TBC",
+        "phone": "TBC",
+        "website": "TBC"
+      },
+      "ar_status": "draft",
+      "source": "printed map label"
+    },
+    {
+      "id": "bus-stop-7",
+      "name": {
+        "en": "Bus Stop",
+        "ar": "موقف حافلات"
+      },
+      "category": "creek",
+      "icon": "bus",
+      "tier": 3,
+      "featured": false,
+      "generic": true,
+      "x": 0.095,
+      "y": 0.7995,
+      "description": {
+        "en": "",
+        "ar": ""
+      },
+      "image": "",
+      "navigation": {
+        "mapsQuery": "",
+        "googleMaps": "",
+        "qr": ""
+      },
+      "meta": {
+        "hours": "TBC",
+        "phone": "TBC",
+        "website": "TBC"
+      },
+      "ar_status": "draft",
+      "source": "printed map label"
+    },
+    {
+      "id": "bus-stop-8",
+      "name": {
+        "en": "Bus Stop",
+        "ar": "موقف حافلات"
+      },
+      "category": "creek",
+      "icon": "bus",
+      "tier": 3,
+      "featured": false,
+      "generic": true,
+      "x": 0.1105,
+      "y": 0.838,
+      "description": {
+        "en": "",
+        "ar": ""
+      },
+      "image": "",
+      "navigation": {
+        "mapsQuery": "",
+        "googleMaps": "",
+        "qr": ""
+      },
+      "meta": {
+        "hours": "TBC",
+        "phone": "TBC",
+        "website": "TBC"
+      },
+      "ar_status": "draft",
+      "source": "printed map label"
+    },
+    {
+      "id": "bus-stop-9",
+      "name": {
+        "en": "Bus Stop",
+        "ar": "موقف حافلات"
+      },
+      "category": "creek",
+      "icon": "bus",
+      "tier": 3,
+      "featured": false,
+      "generic": true,
+      "x": 0.3707,
+      "y": 0.731,
+      "description": {
+        "en": "",
+        "ar": ""
+      },
+      "image": "",
+      "navigation": {
+        "mapsQuery": "",
+        "googleMaps": "",
+        "qr": ""
+      },
+      "meta": {
+        "hours": "TBC",
+        "phone": "TBC",
+        "website": "TBC"
+      },
+      "ar_status": "draft",
+      "source": "printed map label"
+    },
+    {
+      "id": "bus-stop-10",
+      "name": {
+        "en": "Bus Stop",
+        "ar": "موقف حافلات"
+      },
+      "category": "creek",
+      "icon": "bus",
+      "tier": 3,
+      "featured": false,
+      "generic": true,
+      "x": 0.5621,
+      "y": 0.7834,
+      "description": {
+        "en": "",
+        "ar": ""
+      },
+      "image": "",
+      "navigation": {
+        "mapsQuery": "",
+        "googleMaps": "",
+        "qr": ""
+      },
+      "meta": {
+        "hours": "TBC",
+        "phone": "TBC",
+        "website": "TBC"
+      },
+      "ar_status": "draft",
+      "source": "printed map label"
+    },
+    {
+      "id": "bus-stop-11",
+      "name": {
+        "en": "Bus Stop",
+        "ar": "موقف حافلات"
+      },
+      "category": "creek",
+      "icon": "bus",
+      "tier": 3,
+      "featured": false,
+      "generic": true,
+      "x": 0.7882,
+      "y": 0.6062,
+      "description": {
+        "en": "",
+        "ar": ""
+      },
+      "image": "",
+      "navigation": {
+        "mapsQuery": "",
+        "googleMaps": "",
+        "qr": ""
+      },
+      "meta": {
+        "hours": "TBC",
+        "phone": "TBC",
+        "website": "TBC"
+      },
+      "ar_status": "draft",
+      "source": "printed map label"
+    },
+    {
+      "id": "bus-stop-12",
+      "name": {
+        "en": "Bus Stop",
+        "ar": "موقف حافلات"
+      },
+      "category": "creek",
+      "icon": "bus",
+      "tier": 3,
+      "featured": false,
+      "generic": true,
+      "x": 0.29,
+      "y": 0.9234,
+      "description": {
+        "en": "",
+        "ar": ""
+      },
+      "image": "",
+      "navigation": {
+        "mapsQuery": "",
+        "googleMaps": "",
+        "qr": ""
+      },
+      "meta": {
+        "hours": "TBC",
+        "phone": "TBC",
+        "website": "TBC"
+      },
+      "ar_status": "draft",
+      "source": "printed map label"
+    },
+    {
+      "id": "market-1",
+      "name": {
+        "en": "Market",
+        "ar": "سوق"
+      },
+      "category": "souks",
+      "icon": "market",
+      "tier": 3,
+      "featured": false,
+      "generic": true,
+      "x": 0.6276,
+      "y": 0.1899,
+      "description": {
+        "en": "",
+        "ar": ""
+      },
+      "image": "",
+      "navigation": {
+        "mapsQuery": "",
+        "googleMaps": "",
+        "qr": ""
+      },
+      "meta": {
+        "hours": "TBC",
+        "phone": "TBC",
+        "website": "TBC"
+      },
+      "ar_status": "draft",
+      "source": "printed map label"
+    },
+    {
+      "id": "market-2",
+      "name": {
+        "en": "Market",
+        "ar": "سوق"
+      },
+      "category": "souks",
+      "icon": "market",
+      "tier": 3,
+      "featured": false,
+      "generic": true,
+      "x": 0.658,
+      "y": 0.2652,
+      "description": {
+        "en": "",
+        "ar": ""
+      },
+      "image": "",
+      "navigation": {
+        "mapsQuery": "",
+        "googleMaps": "",
+        "qr": ""
+      },
+      "meta": {
+        "hours": "TBC",
+        "phone": "TBC",
+        "website": "TBC"
+      },
+      "ar_status": "draft",
+      "source": "printed map label"
+    },
+    {
+      "id": "market-3",
+      "name": {
+        "en": "Market",
+        "ar": "سوق"
+      },
+      "category": "souks",
+      "icon": "market",
+      "tier": 3,
+      "featured": false,
+      "generic": true,
+      "x": 0.5837,
+      "y": 0.3968,
+      "description": {
+        "en": "",
+        "ar": ""
+      },
+      "image": "",
+      "navigation": {
+        "mapsQuery": "",
+        "googleMaps": "",
+        "qr": ""
+      },
+      "meta": {
+        "hours": "TBC",
+        "phone": "TBC",
+        "website": "TBC"
+      },
+      "ar_status": "draft",
+      "source": "printed map label"
+    },
+    {
+      "id": "market-4",
+      "name": {
+        "en": "Market",
+        "ar": "سوق"
+      },
+      "category": "souks",
+      "icon": "market",
+      "tier": 3,
+      "featured": false,
+      "generic": true,
+      "x": 0.5482,
+      "y": 0.6582,
+      "description": {
+        "en": "",
+        "ar": ""
+      },
+      "image": "",
+      "navigation": {
+        "mapsQuery": "",
+        "googleMaps": "",
+        "qr": ""
+      },
+      "meta": {
+        "hours": "TBC",
+        "phone": "TBC",
+        "website": "TBC"
+      },
+      "ar_status": "draft",
+      "source": "printed map label"
+    },
+    {
+      "id": "market-5",
+      "name": {
+        "en": "Market",
+        "ar": "سوق"
+      },
+      "category": "souks",
+      "icon": "market",
+      "tier": 3,
+      "featured": false,
+      "generic": true,
+      "x": 0.4566,
+      "y": 0.7339,
+      "description": {
+        "en": "",
+        "ar": ""
+      },
+      "image": "",
+      "navigation": {
+        "mapsQuery": "",
+        "googleMaps": "",
+        "qr": ""
+      },
+      "meta": {
+        "hours": "TBC",
+        "phone": "TBC",
+        "website": "TBC"
+      },
+      "ar_status": "draft",
+      "source": "printed map label"
+    },
+    {
+      "id": "restaurant-1",
+      "name": {
+        "en": "Restaurant",
+        "ar": "مطعم"
+      },
+      "category": "food",
+      "icon": "restaurant",
+      "tier": 3,
+      "featured": false,
+      "generic": true,
+      "x": 0.5941,
+      "y": 0.2039,
+      "description": {
+        "en": "",
+        "ar": ""
+      },
+      "image": "",
+      "navigation": {
+        "mapsQuery": "",
+        "googleMaps": "",
+        "qr": ""
+      },
+      "meta": {
+        "hours": "TBC",
+        "phone": "TBC",
+        "website": "TBC"
+      },
+      "ar_status": "draft",
+      "source": "printed map label"
+    },
+    {
+      "id": "restaurant-2",
+      "name": {
+        "en": "Restaurant",
+        "ar": "مطعم"
+      },
+      "category": "food",
+      "icon": "restaurant",
+      "tier": 3,
+      "featured": false,
+      "generic": true,
+      "x": 0.6716,
+      "y": 0.2838,
+      "description": {
+        "en": "",
+        "ar": ""
+      },
+      "image": "",
+      "navigation": {
+        "mapsQuery": "",
+        "googleMaps": "",
+        "qr": ""
+      },
+      "meta": {
+        "hours": "TBC",
+        "phone": "TBC",
+        "website": "TBC"
+      },
+      "ar_status": "draft",
+      "source": "printed map label"
+    },
+    {
+      "id": "restaurant-3",
+      "name": {
+        "en": "Restaurant",
+        "ar": "مطعم"
+      },
+      "category": "food",
+      "icon": "restaurant",
+      "tier": 3,
+      "featured": false,
+      "generic": true,
+      "x": 0.5725,
+      "y": 0.6861,
+      "description": {
+        "en": "",
+        "ar": ""
+      },
+      "image": "",
+      "navigation": {
+        "mapsQuery": "",
+        "googleMaps": "",
+        "qr": ""
+      },
+      "meta": {
+        "hours": "TBC",
+        "phone": "TBC",
+        "website": "TBC"
+      },
+      "ar_status": "draft",
+      "source": "printed map label"
+    },
+    {
+      "id": "hotel-1",
+      "name": {
+        "en": "Hotel",
+        "ar": "فندق"
+      },
+      "category": "stay",
+      "icon": "hotel",
+      "tier": 3,
+      "featured": false,
+      "generic": true,
+      "x": 0.8606,
+      "y": 0.6155,
+      "description": {
+        "en": "",
+        "ar": ""
+      },
+      "image": "",
+      "navigation": {
+        "mapsQuery": "",
+        "googleMaps": "",
+        "qr": ""
+      },
+      "meta": {
+        "hours": "TBC",
+        "phone": "TBC",
+        "website": "TBC"
+      },
+      "ar_status": "draft",
+      "source": "printed map label"
+    },
+    {
+      "id": "hotel-2",
+      "name": {
+        "en": "Hotel",
+        "ar": "فندق"
+      },
+      "category": "stay",
+      "icon": "hotel",
+      "tier": 3,
+      "featured": false,
+      "generic": true,
+      "x": 0.9801,
+      "y": 0.772,
+      "description": {
+        "en": "",
+        "ar": ""
+      },
+      "image": "",
+      "navigation": {
+        "mapsQuery": "",
+        "googleMaps": "",
+        "qr": ""
+      },
+      "meta": {
+        "hours": "TBC",
+        "phone": "TBC",
+        "website": "TBC"
+      },
+      "ar_status": "draft",
+      "source": "printed map label"
+    },
+    {
+      "id": "hotel-3",
+      "name": {
+        "en": "Hotel",
+        "ar": "فندق"
+      },
+      "category": "stay",
+      "icon": "hotel",
+      "tier": 3,
+      "featured": false,
+      "generic": true,
+      "x": 0.9747,
+      "y": 0.8135,
+      "description": {
+        "en": "",
+        "ar": ""
+      },
+      "image": "",
+      "navigation": {
+        "mapsQuery": "",
+        "googleMaps": "",
+        "qr": ""
+      },
+      "meta": {
+        "hours": "TBC",
+        "phone": "TBC",
+        "website": "TBC"
+      },
+      "ar_status": "draft",
+      "source": "printed map label"
+    }
+  ]
+}

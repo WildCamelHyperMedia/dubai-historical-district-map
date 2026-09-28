@@ -1,0 +1,31 @@
+{
+ "name": "Dubai Historical District — Interactive Map",
+ "short_name": "Historical District",
+ "description": "Interactive map of the Dubai Historical District — Al Shindagha, Bur Dubai, Al Fahidi, Al Seef and Deira.",
+ "start_url": "./",
+ "scope": "./",
+ "display": "standalone",
+ "orientation": "any",
+ "background_color": "#F3E8D6",
+ "theme_color": "#F3E8D6",
+ "lang": "en",
+ "dir": "auto",
+ "icons": [
+  {
+   "src": "icons/icon-192.png",
+   "sizes": "192x192",
+   "type": "image/png"
+  },
+  {
+   "src": "icons/icon-512.png",
+   "sizes": "512x512",
+   "type": "image/png"
+  },
+  {
+   "src": "icons/icon-maskable-512.png",
+   "sizes": "512x512",
+   "type": "image/png",
+   "purpose": "maskable"
+  }
+ ]
+}
